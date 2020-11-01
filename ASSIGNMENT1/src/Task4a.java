@@ -22,7 +22,7 @@ public class Task4a {
             }
 
         }
-        /*in case n is bigger than than 46340*/
+        /*in case p is bigger than than 46340*/
         if (ans)
             p= 46340;
             while(p <n && ans){
