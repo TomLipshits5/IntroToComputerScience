@@ -91,7 +91,9 @@ public class Math {
     }
 
     public static void main(String[] args) {
+
         double a = Integer.MAX_VALUE;
+        System.out.println("tom is the king");
     }
 
 
