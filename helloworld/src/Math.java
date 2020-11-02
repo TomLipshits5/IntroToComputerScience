@@ -84,16 +84,10 @@ public class Math {
         return array;
 
     }
-    public static void swap(int a, int b){
-        int temp = a;
-        a=b;
-        b=temp;
-    }
 
     public static void main(String[] args) {
-
-        double a = Integer.MAX_VALUE;
-        System.out.println("tom is the king");
+        int[] a = new int[0];
+        System.out.println(a.length);
     }
 
 
