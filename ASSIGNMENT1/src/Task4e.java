@@ -17,7 +17,7 @@ public class Task4e {
         int d = scanner.nextInt();
 
 
-        /*condition 1*/
+        /*condition 1 using the formula (a*b)%c == ((a%c)*(b%c))%c */
         int powerOfB = d;
         int condition1 = b % n;
         while (powerOfB > 1) {
@@ -29,11 +29,12 @@ public class Task4e {
             ans2 = b;
         }
 
-        /*condition 2*/
+        /*condition 2 will be checked only if condition1 is true*/
         if (!ans1) {
             for (int i = 0; i <= (s - 1) && !ans1; i++) {
                 int powerOf2 = i;
                 int base = 1;
+                /*using a simple loop calculating the power of 2*/
                 while (powerOf2 > 0) {
                     base = base * 2;
                     powerOf2--;
@@ -41,10 +42,12 @@ public class Task4e {
                 }
                 powerOfB = base * d;
                 int condition2 = b % n;
+                /*calculating condition2 value using the same formula as condition1*/
                 while (powerOfB > 1) {
                     condition2 = (condition2 * (b % n)) % n;
                     powerOfB--;
                 }
+                /*checking if condition2 is true for all i*/
                 if (condition2 == (n - 1)) {
                     ans1 = true;
                     ans2 = -1;
