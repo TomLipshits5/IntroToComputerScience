@@ -1,9 +1,9 @@
 public class Sorting {
 
     public static void main(String[] args) {
-        int[] array = {1,5,2,8,6,7,1,6,32,0};
+        int[] array = {1,3,4,81,500,6,8,9,2,10,12,16,48,17,19,95,50,54,55,98};
         sort(array);
-        System.out.println(isSorted(array));
+        System.out.println(binarySearch(array,19));
         printArray(array);
     }
 
@@ -27,11 +27,35 @@ public class Sorting {
 
         }
         if (!isSorted(array)) {
-            for (int i = 0; i < array.length; i++) {
+            for (int i = 0; i < array.length-1; i++) {
                 int minIndex = minIndex(array, i);
                 swap(array, i, minIndex);
             }
         }
+    }
+
+    public static int binarySearch(int[] array, int key){
+        if (array == null){
+            throw new IllegalArgumentException("array == null");
+        }
+
+        /*assumes array is sorted and != null*/
+        int output = -1;
+        boolean found  = false;
+        int low = 0, high = array.length - 1;
+        while(low<=high && !found){
+            int middle = (low+high)/2;
+            if (array[middle]==key){
+                found = true;
+                output = middle;
+            }
+            else if(array[middle]>key){
+                high = middle-1;
+
+            }
+            else low = middle+1;
+        }
+        return output;
     }
 
 
