@@ -1,7 +1,7 @@
 public class Sorting {
 
     public static void main(String[] args) {
-        int[] array = {1,3,4,81,500,6,8,9,2,10,12,16,48,17,19,95,50,54,55,98};
+        int[] array = {};
         sort(array);
         System.out.println(binarySearch(array,19));
         printArray(array);
