@@ -10,6 +10,8 @@ public class Task4d {
         int ans2 = 0;
 
         //---------------write your code BELOW this line only!--------------
+        /*Comparing ans2%2 to 0 will tell ass the power of 2
+         once the module is different then 0 we stop the loop and print ans1 and ans2*/
         int n = scanner.nextInt();
         ans2 = n - 1;
         while (ans2 % 2 == 0) {

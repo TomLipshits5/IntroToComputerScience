@@ -84,19 +84,54 @@ public class Math {
         return array;
 
     }
-    public static void swap(int a, int b){
-        int temp = a;
-        a=b;
-        b=temp;
+    public static void add5(int[] n){
+        n[0]=n[0]+1;
+
+
     }
 
     public static void main(String[] args) {
-        double a = Integer.MAX_VALUE;
-        System.out.println(sqrt(a));
+//        String pasok = "{a&(b|c)}&d";
+//        char[] character = pasok.toCharArray();
+//        int numPar = 0;
+//        for (char i : character){
+//            boolean isnum = Character.isLetter(i);
+//            if (isnum) numPar++;
+//            }
+//        System.out.println(numPar);
+//
+//        int start = 0;
+//        int end = 0;
+//        for(int i = 0 ; i<character.length;i++){
+//
+//            if (character[i] == '{'|character[i] == '('|character[i] == '['){
+//                if (start<i) start = i;
+//            }
+//
+//            if (character[i] == '}'|character[i] == ')'|character[i] == ']') {
+//                end = i;
+//            }
+//        }
+//        System.out.println(pasok.substring(start,end))
+        boolean x= true;
+        boolean y = false;
+        boolean test = x&y;
+        String test1= "false|true";
+        char[] arr = {'a','b','c'};
+        System.out.println(Boolean.valueOf(test1));
+
+
+
+
     }
 
 
+
+
 }
+
+
+
 
 
 
