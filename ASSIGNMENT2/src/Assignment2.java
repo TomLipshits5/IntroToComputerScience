@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class Assignment2 {
 
@@ -107,33 +108,83 @@ public class Assignment2 {
 
     // task 8
     public static boolean evaluate(int[][] cnf, boolean[] assign) {
-        throw new UnsupportedOperationException("Not Implemented yet.");
+        boolean evaluate = true;
+        for (int[] var : cnf){
+            boolean value = false;
+            for(int i : var){
+                if(i<0){
+                    value = value || !assign[-i];
+                }
+                else{
+                    value = value || assign[i];
+                }
+            }
+            if (!value){
+                return value;
+            }
+        }
+
+
+        return evaluate;
+
     }
 
     // task 9
     public static int[][] atLeastOne(int[] lits) {
-        throw new UnsupportedOperationException("Not Implemented yet.");
+        return new int[][]{lits};
     }
 
     // task 10
     public static int[][] atMostOne(int[] lits) {
-        throw new UnsupportedOperationException("Not Implemented yet.");
+        int[][] atMostOne = new int[lits.length + 1][lits.length];
+        for (int i = 0; i<atMostOne.length; i++){
+            for (int j = 0 ; j<lits.length; j++){
+                if (j!=i){
+                    atMostOne[i][j] = -lits[j];
+                }
+                else{
+                    atMostOne[i][j]= lits[j];
+                }
+            }
+
+        }
+        return atMostOne;
     }
 
     // task 11
     public static int[][] exactlyOne(int[] lits) {
-        throw new UnsupportedOperationException("Not Implemented yet.");
+        int[][] exactlyOne = new int[lits.length+2][lits.length];
+        int[][] atMostOne = atMostOne(lits);
+        for(int i =0; i <atMostOne.length ; i++){
+            exactlyOne[i] = atMostOne[i];
+        }
+        exactlyOne[atMostOne.length] = lits;
+        return exactlyOne;
+
     }
 
 
     public static void main(String[] args) {
-        boolean[][] matrix =  {{false, false, true, true },
-                                {false, false, true, true },
-                                    {true, true, false, true },
-                                        {true, true, true, false}};
-        ;
-        int[] array = {0,2,1};
-        boolean test = isSolution(matrix,array);
-        System.out.println(test);
+
+        int[] lits1 = {1,2,3};
+        int[] lits2 = {-1,2,3};
+        int[][] cnf1 = exactlyOne(lits1);
+        int[][] cnf2 = exactlyOne(lits2);
+        boolean[] assign1 = {false,false, false,  false};
+        boolean[] assign2 = {false, false, true, true};
+        boolean[] assign3 = {false, true, false, false};
+        System.out.println(evaluate(cnf1,assign1));
+        System.out.println(evaluate(cnf1,assign2));
+        System.out.println(evaluate(cnf1,assign3));
+        System.out.println(evaluate(cnf2,assign1));
+        System.out.println(evaluate(cnf2,assign2));
+        System.out.println(evaluate(cnf2,assign3));
+//        int[][] test = exactlyOne(lits2);
+//        for (int[] i : test){
+//            System.out.println(Arrays.toString(i));
+
+
+
+
     }
 }
