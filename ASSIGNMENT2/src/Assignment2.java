@@ -163,25 +163,92 @@ public class Assignment2 {
 
     }
 
+    /*------------------------
+     *| Part B - tasks 12-20 |
+     * -----------------------*/
+
+    // task 12a
+    public static int map(int i, int j, int n) {
+        return (i%n)*n+j+1;
+    }
+
+    // task 12b
+    public static int[] reverseMap(int k, int n) {
+        return new int[] {(k-1)/n,(k-1)%n};
+    }
+
+    // task 13
+    public static int[][] oneCityInEachStep(int n) {
+        int[][] cnf = new int[n*(n+2)][n];
+        int step = 0;
+        for (int i = 0; i<n; i++){
+            int[] var = new int[n];
+            for (int j = 0 ; j<n ; j++){
+                var[j] = map(i,j,n);
+            }
+            int[][] myStepCnf = exactlyOne(var);
+            for(int t = 0 ; t<myStepCnf.length ; t++){
+                cnf[t+step] = myStepCnf[t];
+            }
+            step = step + (n+2);
+        }
+        return cnf;
+    }
+
+    // task 14
+    public static int[][] eachCityIsVisitedOnce(int n) {
+        throw new UnsupportedOperationException("Not Implemented yet.");
+    }
+
+    // task 15
+    public static int[][] fixSourceCity(int n) {
+        throw new UnsupportedOperationException("Not Implemented yet.");
+    }
+
+    // task 16
+    public static int[][] noIllegalSteps(boolean[][] flights) {
+        throw new UnsupportedOperationException("Not Implemented yet.");
+    }
+
+    // task 17
+    public static int[][] encode(boolean[][] flights) {
+        throw new UnsupportedOperationException("Not Implemented yet.");
+    }
+
+    // task 18
+    public static int[] decode(boolean[] assignment, int n) {
+        throw new UnsupportedOperationException("Not Implemented yet.");
+    }
+
+    // task19
+    public static int[] solve(boolean[][] flights) {
+        throw new UnsupportedOperationException("Not Implemented yet.");
+    }
+
+    // task20
+    public static boolean solve2(boolean[][] flights) {
+        throw new UnsupportedOperationException("Not Implemented yet.");
+    }
+
 
     public static void main(String[] args) {
 
-        int[] lits1 = {1,2,3};
+        int[] lits1 = {7,8,9};
         int[] lits2 = {-1,2,3};
         int[][] cnf1 = exactlyOne(lits1);
         int[][] cnf2 = exactlyOne(lits2);
         boolean[] assign1 = {false,false, false,  false};
         boolean[] assign2 = {false, false, true, true};
         boolean[] assign3 = {false, true, false, false};
-        System.out.println(evaluate(cnf1,assign1));
-        System.out.println(evaluate(cnf1,assign2));
-        System.out.println(evaluate(cnf1,assign3));
-        System.out.println(evaluate(cnf2,assign1));
-        System.out.println(evaluate(cnf2,assign2));
-        System.out.println(evaluate(cnf2,assign3));
-//        int[][] test = exactlyOne(lits2);
-//        for (int[] i : test){
-//            System.out.println(Arrays.toString(i));
+        int[][] test = oneCityInEachStep(4);
+        for (int[] i :test){
+            System.out.println(Arrays.toString(i));
+        }
+
+//        int k = map(1,0,4);
+//        System.out.println(k);
+//        System.out.println(Arrays.toString(reverseMap(k,4)));
+
 
 
 
