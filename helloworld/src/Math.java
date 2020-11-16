@@ -1,9 +1,4 @@
-
 import java.util.Arrays;
-
-import java.util.Scanner;
-
-import static java.lang.Math.sqrt;
 import static  java.lang.Math.*;
 
 public class Math {
@@ -21,6 +16,17 @@ public class Math {
         }
         return y;
     }
+    public static int recorsivGCD(int m,int n){
+        int output;
+        if (m%n == 0){
+            output = n;
+        }
+        else{
+            output = recorsivGCD(n,m%n);
+        }
+        return output;
+    }
+
 
     static char[] convertToList(int num) {
         String Snumber;
@@ -84,41 +90,88 @@ public class Math {
         return array;
 
     }
-    public static void add5(int[] n){
-        n[0]=n[0]+1;
+    public static int factorial(int n){
+        int output = 1;
+        for (int i = 2; i<=n ; i++){
+            output = output * i;
+        }
+        return output;
+    }
+    public static int recorsivFactorial(int n){
+        int output;
+        if (n==0){
+            output = 1;
+        }
+        else {
+            output = n * recorsivFactorial(n - 1);
+        }
+        return output;
+    }
+    public static int recorsivPerfectMait(int n){
+        int output;
+        if (n == 0){
+            output = 1;
+        }
+        else{
+            output = (n-1) * recorsivPerfectMait(n-2);
+        }
+        return output;
+    }
+    public static int factorialOdds(int n){
+        int output = 1;
+        if(n%2 != 0){
+            throw new IllegalArgumentException("input has to be an even number");
+        }
+        else
+            for (int i = 3; i<n; i=i+2){
+                output = output * i;
+            }
 
+        return output;
+    }
+    public static int fibonachy(int n){
+        int output = 1;
+        int f0 = 1;
+        int f1= 1;
+        for(int i = 2; i<=n; i++){
+            output = f0+f1;
+            f0 = f1;
+            f1 = output;
+
+        }
+        return output;
+    }
+
+    public static int recorsivFibonachy(int n){
+        int output;
+        if(n == 1 || n== 0 ){
+            output = 1;
+        }
+        else{
+            output = recorsivFibonachy(n-1) + recorsivFibonachy(n-2);
+        }
+        return output;
+    }
+    public static int spiderman(int n){
+        int ouutput;
+        if(n==0|n==1){
+            ouutput =1;
+        }
+        else{
+            ouutput = spiderman(n-1) + spiderman(n-2);
+        }
+        return ouutput;
+    }
+
+    public static void hanoiTour(int n, char source, char destinatoin,char extra){
 
     }
 
+
+
     public static void main(String[] args) {
-//        String pasok = "{a&(b|c)}&d";
-//        char[] character = pasok.toCharArray();
-//        int numPar = 0;
-//        for (char i : character){
-//            boolean isnum = Character.isLetter(i);
-//            if (isnum) numPar++;
-//            }
-//        System.out.println(numPar);
-//
-//        int start = 0;
-//        int end = 0;
-//        for(int i = 0 ; i<character.length;i++){
-//
-//            if (character[i] == '{'|character[i] == '('|character[i] == '['){
-//                if (start<i) start = i;
-//            }
-//
-//            if (character[i] == '}'|character[i] == ')'|character[i] == ']') {
-//                end = i;
-//            }
-//        }
-//        System.out.println(pasok.substring(start,end))
-        boolean x= true;
-        boolean y = false;
-        boolean test = x&y;
-        String test1= "false|true";
-        char[] arr = {'a','b','c'};
-        System.out.println(Boolean.valueOf(test1));
+        System.out.println(GCD(25,65));
+        System.out.println(recorsivGCD(25,65));
 
 
 
