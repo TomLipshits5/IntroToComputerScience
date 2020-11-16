@@ -8,11 +8,13 @@ public class Assignment2 {
      * ----------------------*/
 
     // task 1
+    // Check if the matrix has n rows and n variables in each row.
     public static boolean isSquareMatrix(boolean[][] matrix) {
-        if (matrix == null || matrix.length == 0) {
-            return false;
-        }
         boolean isSquareMatrix = true;
+        if (matrix == null || matrix.length == 0) {
+            isSquareMatrix = false;
+        }
+
         int numPar = matrix.length;
         for (int index = 0; index < numPar && isSquareMatrix; index++) {
             if (matrix[index].length != numPar) {
@@ -23,6 +25,7 @@ public class Assignment2 {
     }
 
     // task 2
+    //Check if the value of matrix[i][j] is equal to matrix[j][i].
     public static boolean isSymmetricMatrix(boolean[][] matrix) {
         boolean isSymmetricMatrix = true;
         int numPar = matrix.length;
@@ -38,6 +41,7 @@ public class Assignment2 {
     }
 
     // task 3
+    // Check if the value of the matrix[i][i] is always false.
     public static boolean isAntiReflexiveMatrix(boolean[][] matrix) {
         boolean isAntiReflexivMatrix = true;
         int numPar = matrix.length;
@@ -50,6 +54,7 @@ public class Assignment2 {
     }
 
     // task 4
+    // applay all three checks to make sure the matrix is a valid appearance.
     public static boolean isLegalInstance(boolean[][] matrix) {
         boolean isLegalInstance = false;
         if (isSquareMatrix(matrix) && isAntiReflexiveMatrix(matrix) && isSymmetricMatrix(matrix)){
@@ -59,6 +64,8 @@ public class Assignment2 {
     }
 
     // task 5
+    //check that an int array of n objects will contain 0<= i < n with no repetitions or exceptions,
+    // regardless to order.
     public static boolean isPermutation(int[] array) {
         boolean isPermutauion = true;
         for (int i = 0 ; i<array.length && isPermutauion ; i++){
@@ -77,9 +84,11 @@ public class Assignment2 {
     }
 
     // task 6
+    //Check if the steps in the array tour is legal according to the flights array,
+    // and ensuring that there is a rout between the last and the first city.
     public static boolean hasLegalSteps(boolean[][] flights, int[] tour) {
         boolean hasLegalSteps = true;
-        if (!flights[0][tour[tour.length-1]]){
+        if (!flights[tour[0]][tour[tour.length-1]]){
             hasLegalSteps=false;
         }
         for(int i = 0 ; i< tour.length-1 && hasLegalSteps; i++){
@@ -93,7 +102,10 @@ public class Assignment2 {
     }
 
     // task 7
+    //applay the prior two checks to make sure the solution is valid.
+
     public static boolean isSolution(boolean[][] flights, int[] tour) {
+        boolean isSolution = true;
         if (tour.length != flights.length){
             throw new IllegalArgumentException("tour is shorter than n");
         }
@@ -107,6 +119,7 @@ public class Assignment2 {
     }
 
     // task 8
+    //Checks if an assign is a valid solution for a given cnf formula.
     public static boolean evaluate(int[][] cnf, boolean[] assign) {
         boolean evaluate = true;
         for (int[] var : cnf){
@@ -130,11 +143,13 @@ public class Assignment2 {
     }
 
     // task 9
+    // Creates a clause that represents: at least one of the literals is true.
     public static int[][] atLeastOne(int[] lits) {
         return new int[][]{lits};
     }
 
     // task 10
+    // Creates a clause that represents: at most one of the literals is true.
     public static int[][] atMostOne(int[] lits) {
         int[][] atMostOne = new int[lits.length + 1][lits.length];
         for (int i = 0; i<atMostOne.length; i++){
@@ -152,6 +167,7 @@ public class Assignment2 {
     }
 
     // task 11
+    //Join the two prior functions to create a clause that represents: exactly one of the literals.
     public static int[][] exactlyOne(int[] lits) {
         int[][] exactlyOne = new int[lits.length+2][lits.length];
         int[][] atMostOne = atMostOne(lits);
@@ -234,8 +250,8 @@ public class Assignment2 {
     public static void main(String[] args) {
 
         int[] lits1 = {7,8,9};
-        int[] lits2 = {-1,2,3};
-        int[][] cnf1 = exactlyOne(lits1);
+        int[] lits2 = {1,3,2,0};
+        boolean[][] cnf1 = {{false, true, true, false}, {true, false, true, true}, {true, true, false, true}, {false, true, true, false}};
         int[][] cnf2 = exactlyOne(lits2);
         boolean[] assign1 = {false,false, false,  false};
         boolean[] assign2 = {false, false, true, true};
