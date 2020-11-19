@@ -2,7 +2,7 @@ public class test {
     public static void main(String[] args) {
         int nVars = 3;
         SATSolver.init(nVars);
-        int[] clause = {1};
+        int[] clause = {-1};
         SATSolver.addClause(clause);
         int[][] clauses = {{-1, -2}, {2, 3},{-1,-3}};
         SATSolver.addClauses(clauses);
