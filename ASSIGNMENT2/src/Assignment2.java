@@ -1,3 +1,5 @@
+import org.sat4j.minisat.restarts.ArminRestarts;
+
 import java.util.Arrays;
 
 public class Assignment2 {
@@ -8,11 +10,11 @@ public class Assignment2 {
      * ----------------------*/
 
     // task 1
-    // Check if the matrix has n rows and n variables in each row.
+    // Check if the matrix has n rows and n elements in each row.
     public static boolean isSquareMatrix(boolean[][] matrix) {
         boolean isSquareMatrix = true;
         if (matrix == null || matrix.length == 0) {
-            isSquareMatrix = false;
+            return false;
         }
 
         int numPar = matrix.length;
@@ -54,7 +56,7 @@ public class Assignment2 {
     }
 
     // task 4
-    // applay all three checks to make sure the matrix is a valid appearance.
+    // apply all three checks to make sure the matrix is a valid appearance.
     public static boolean isLegalInstance(boolean[][] matrix) {
         boolean isLegalInstance = false;
         if (isSquareMatrix(matrix) && isAntiReflexiveMatrix(matrix) && isSymmetricMatrix(matrix)){
@@ -102,12 +104,12 @@ public class Assignment2 {
     }
 
     // task 7
-    //applay the prior two checks to make sure the solution is valid.
-
+    //apply the prior two checks to make sure the solution is valid.
     public static boolean isSolution(boolean[][] flights, int[] tour) {
         boolean isSolution = true;
-        if (tour.length != flights.length){
-            throw new IllegalArgumentException("tour is shorter than n");
+
+        if (tour == null || tour.length != flights.length){
+            throw new IllegalArgumentException("Tour is not correct");
         }
         if (tour[0]!=0){
             return false;
@@ -121,7 +123,6 @@ public class Assignment2 {
     // task 8
     //Checks if an assign is a valid solution for a given cnf formula.
     public static boolean evaluate(int[][] cnf, boolean[] assign) {
-        boolean evaluate = true;
         for (int[] var : cnf){
             boolean value = false;
             for(int i : var){
@@ -133,13 +134,10 @@ public class Assignment2 {
                 }
             }
             if (!value){
-                return value;
+                return false;
             }
         }
-
-
-        return evaluate;
-
+        return true;
     }
 
     // task 9
@@ -151,26 +149,26 @@ public class Assignment2 {
     // task 10
     // Creates a clause that represents: at most one of the literals is true.
     public static int[][] atMostOne(int[] lits) {
-        int[][] atMostOne = new int[lits.length + 1][lits.length];
-        for (int i = 0; i<atMostOne.length; i++){
-            for (int j = 0 ; j<lits.length; j++){
-                if (j!=i){
-                    atMostOne[i][j] = -lits[j];
-                }
-                else{
-                    atMostOne[i][j]= lits[j];
-                }
-            }
+        int numOfLits = lits.length;
+        int numOfClauses = numOfLits * (numOfLits-1)/2;
+        int currIndex =0;
+        int[][] cnf= new int[numOfClauses][numOfLits];
+        for(int i=0; i<lits.length; i++){
 
+            for(int j=i+1; j<lits.length; j++, currIndex ++){
+                int[] clause = {-lits[i], -lits[j]};
+                cnf[currIndex] = clause;
+            }
         }
-        return atMostOne;
+        return cnf;
     }
+
 
     // task 11
     //Join the two prior functions to create a clause that represents: exactly one of the literals.
     public static int[][] exactlyOne(int[] lits) {
-        int[][] exactlyOne = new int[lits.length+2][lits.length];
         int[][] atMostOne = atMostOne(lits);
+        int[][] exactlyOne = new int[atMostOne.length+1][lits.length];
         for(int i =0; i <atMostOne.length ; i++){
             exactlyOne[i] = atMostOne[i];
         }
@@ -184,86 +182,222 @@ public class Assignment2 {
      * -----------------------*/
 
     // task 12a
+    // Convert a city and a step to a unique indexed value.
     public static int map(int i, int j, int n) {
         return (i%n)*n+j+1;
     }
 
     // task 12b
+    //Reverse a mapped value to its step and city.
     public static int[] reverseMap(int k, int n) {
         return new int[] {(k-1)/n,(k-1)%n};
     }
 
     // task 13
+    // Create a CNF that make sure that one city is visited each step.
     public static int[][] oneCityInEachStep(int n) {
-        int[][] cnf = new int[n*(n+2)][n];
+        int[] literalsZeroArray = new int [n];
+        int numOfRowsForStep = exactlyOne(literalsZeroArray).length;
+        int[][] cnf = new int[n*numOfRowsForStep][];
         int step = 0;
         for (int i = 0; i<n; i++){
-            int[] var = new int[n];
+            int[] literals = new int[n];
             for (int j = 0 ; j<n ; j++){
-                var[j] = map(i,j,n);
+                literals[j] = map(i,j,n);
             }
-            int[][] myStepCnf = exactlyOne(var);
+            int[][] myStepCnf = exactlyOne(literals);
             for(int t = 0 ; t<myStepCnf.length ; t++){
                 cnf[t+step] = myStepCnf[t];
             }
-            step = step + (n+2);
+            step = step + numOfRowsForStep;
         }
         return cnf;
     }
 
     // task 14
+    // Create a CNF that make sure that each city is visited once.
     public static int[][] eachCityIsVisitedOnce(int n) {
-        throw new UnsupportedOperationException("Not Implemented yet.");
+        int[] literalsZeroArray = new int [n];
+        int numRowsForCity = exactlyOne(literalsZeroArray).length;
+        int[][] cnf = new int[n*numRowsForCity][];
+        int step =0;
+        for (int i = 0; i<n; i++){
+            int[] literals = new int[n];
+            for (int j = 0; j<n; j++){
+                literals[j] = map(j,i,n);
+            }
+            int[][] myCityCnf = exactlyOne(literals);
+            for (int t = 0; t<myCityCnf.length; t++){
+                cnf[t+step] = myCityCnf[t];
+            }
+            step = step + numRowsForCity;
+
+
+        }
+        return cnf;
     }
 
     // task 15
+    // Create a CNF that ensure that the first city is 0.
     public static int[][] fixSourceCity(int n) {
-        throw new UnsupportedOperationException("Not Implemented yet.");
+        return new int[][]{{map(0,0,n)}};
     }
 
     // task 16
+    //Create a CNF that make sure there is no illegal steps between cities.
     public static int[][] noIllegalSteps(boolean[][] flights) {
-        throw new UnsupportedOperationException("Not Implemented yet.");
+        int step = 0;
+        int clouseCounter = 0;
+        int counter = 0;
+        for (int j = 0; j < flights.length; j++) {
+            for (int i = 0; i < flights.length; i++) {
+                if (!flights[j][i]) {
+                    counter++;
+                }
+            }
+        }
+        int[][] cnf = new int[flights.length* counter][2];
+        while(step< flights.length) {
+            for (int city = 0; city < flights.length; city++) {
+                for (int i = 0; i < flights[step].length; i++) {
+                    if (!flights[city][i]){
+                        int[] clouse = {-map(step,city, flights.length),-map(step+1,i,flights.length)};
+                        cnf[clouseCounter]= clouse;
+                        clouseCounter++;
+                    }
+                }
+            }
+            step++;
+        }
+
+        return cnf;
     }
 
     // task 17
+    // Convert a flight array to a CNF by the three conditions above.
     public static int[][] encode(boolean[][] flights) {
-        throw new UnsupportedOperationException("Not Implemented yet.");
+        int[][]firstCon = oneCityInEachStep(flights.length);
+        int[][]secondCon = eachCityIsVisitedOnce(flights.length);
+        int[][]thirdCon = noIllegalSteps(flights);
+        int[][]fourthCon = fixSourceCity(flights.length);
+        int cnfClouses = firstCon.length+secondCon.length+thirdCon.length+fourthCon.length;
+        int[][] cnf = new int[cnfClouses][];
+        for (int i = 0; i<firstCon.length;i++){
+            cnf[i] = firstCon[i];
+        }
+        for (int i = 0; i<secondCon.length;i++){
+            cnf[firstCon.length+i] = secondCon[i];
+        }
+        for (int i = 0; i< thirdCon.length; i++){
+            cnf[firstCon.length+secondCon.length+i] = thirdCon[i];
+        }
+        cnf[cnfClouses-1] = fourthCon[0];
+        return cnf;
     }
 
     // task 18
+    // decode an assignment to a tour array.
     public static int[] decode(boolean[] assignment, int n) {
-        throw new UnsupportedOperationException("Not Implemented yet.");
+        if (assignment == null || assignment.length != (n*n)+1){
+            throw new IllegalArgumentException("Assignment is illegal.");
+        }
+        int[] tour = new int[n];
+        for (int i =0; i<assignment.length; i++){
+            if(assignment[i]){
+                int[] myStep = reverseMap(i,n);
+                tour[myStep[0]] = myStep[1];
+            }
+        }
+        return tour;
     }
 
     // task19
+    // Creats and find a solution for the big trip problem.
     public static int[] solve(boolean[][] flights) {
-        throw new UnsupportedOperationException("Not Implemented yet.");
+        if (!isLegalInstance(flights)){
+            throw new IllegalArgumentException("Illegal flights array.");
+        }
+
+        int nVars = flights.length* flights.length;
+        SATSolver.init(nVars);
+        int[][] cnf = encode(flights);
+        SATSolver.addClauses(cnf);
+        boolean[] assignment = SATSolver.getSolution();
+        if (assignment.length == nVars +1){
+            int[] tour = decode(assignment, flights.length);
+            if (isSolution(flights,tour)){
+                return tour;
+            }
+            else{
+                throw new IllegalArgumentException("Tour is not a legal solution.");
+            }
+        }
+        else if(assignment == null){
+            throw new IllegalArgumentException("Solution timeout.");
+        }
+        else{
+            throw new IllegalArgumentException("There is no satisfying solution.");
+        }
     }
 
     // task20
+    //Checks if there is more than one solution.
     public static boolean solve2(boolean[][] flights) {
-        throw new UnsupportedOperationException("Not Implemented yet.");
+        int nVars = flights.length * flights.length;
+        int[] tour1 = solve(flights);
+        int[] tour2 = new int[tour1.length];
+        int start = 1;
+        int end = tour1.length-1;
+        while (start <= end){
+            tour2[start] = tour1[end];
+            tour2[end] = tour1[start];
+            start++;
+            end--;
+        }
+        int[] literals1 = new int[tour1.length];
+        int[] literals2 = new int[tour2.length];
+        for (int i =0; i<tour1.length; i++){
+            literals1[i] = -map(i,tour1[i], tour1.length);
+            literals2[i] = -map(i,tour2[i], tour2.length);
+        }
+        SATSolver.init(nVars);
+        SATSolver.addClause(literals1);
+        SATSolver.addClause(literals2);
+        int[][] cnf = encode(flights);
+        SATSolver.addClauses(cnf);
+        boolean[] assignment = SATSolver.getSolution();
+        if (assignment.length == tour2.length*tour1.length +1){
+            int[] tour = decode(assignment, flights.length);
+            if (isSolution(flights,tour)){
+                return true;
+            }
+            else{
+                throw new IllegalArgumentException("Tour is not a legal solution.");
+            }
+        }
+        else if(assignment == null){
+            throw new IllegalArgumentException("Solution timeout.");
+        }
+        else{
+            return false;
+        }
     }
 
 
     public static void main(String[] args) {
+        boolean[][] flights1 = {{false, false, true,true },
+                                {false, false, true,true },
+                                {true, true, false,true },
+                                {true,true,true,false}};
 
-        int[] lits1 = {7,8,9};
-        int[] lits2 = {1,3,2,0};
-        boolean[][] cnf1 = {{false, true, true, false}, {true, false, true, true}, {true, true, false, true}, {false, true, true, false}};
-        int[][] cnf2 = exactlyOne(lits2);
-        boolean[] assign1 = {false,false, false,  false};
-        boolean[] assign2 = {false, false, true, true};
-        boolean[] assign3 = {false, true, false, false};
-        int[][] test = oneCityInEachStep(4);
-        for (int[] i :test){
-            System.out.println(Arrays.toString(i));
-        }
+        boolean[][] flights = {{false, true, true },
+                                 {true, false, true },
+                                 {true, true, false }};
+        boolean[][] flights2 = {{}};
+        System.out.println(Arrays.toString(solve(flights1)));
+        System.out.println((solve2(flights1)));
 
-//        int k = map(1,0,4);
-//        System.out.println(k);
-//        System.out.println(Arrays.toString(reverseMap(k,4)));
+
 
 
 
