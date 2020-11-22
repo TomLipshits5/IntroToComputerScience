@@ -57,8 +57,10 @@ public class Strings {
 
 
     public static void main(String[] args){
-        System.out.println(longestCommonSubstring("srewfabcdefghtyertertu","dfnartnmabcdefghdfghvbxtuuil;p"));
-
+        char c = new Character('?') ;
+        System.out.println(c);
+        String s = "123";
+        System.out.println(s.charAt(3));
     }
 
 }

@@ -170,8 +170,10 @@ public class Math {
 
 
     public static void main(String[] args) {
-        System.out.println(GCD(25,65));
-        System.out.println(recorsivGCD(25,65));
+        Record r1 = new Record("053", "Banana");
+        System.out.println(r1.getKey());
+        r1.setKey("53");
+        System.out.println(r1.getKey());
 
 
 
