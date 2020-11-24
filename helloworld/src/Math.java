@@ -171,9 +171,8 @@ public class Math {
 
     public static void main(String[] args) {
         Record r1 = new Record("053", "Banana");
-        System.out.println(r1.getKey());
-        r1.setKey("53");
-        System.out.println(r1.getKey());
+        Record r2 = new Record("053", "Banana");
+
 
 
 

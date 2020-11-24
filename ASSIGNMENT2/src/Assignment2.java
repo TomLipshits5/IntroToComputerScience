@@ -251,7 +251,7 @@ public class Assignment2 {
         int counter = 0;
         for (int j = 0; j < flights.length; j++) {
             for (int i = 0; i < flights.length; i++) {
-                if (!flights[j][i]) {
+                if (!flights[j][i] && i != j) {
                     counter++;
                 }
             }
@@ -260,7 +260,7 @@ public class Assignment2 {
         while(step< flights.length) {
             for (int city = 0; city < flights.length; city++) {
                 for (int i = 0; i < flights[step].length; i++) {
-                    if (!flights[city][i]){
+                    if (!flights[city][i]&& i != city){
                         int[] clouse = {-map(step,city, flights.length),-map(step+1,i,flights.length)};
                         cnf[clouseCounter]= clouse;
                         clouseCounter++;

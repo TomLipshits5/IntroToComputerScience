@@ -26,6 +26,9 @@ public class Record{
     public void  setValue(String value){
         this.value = value;
     }
+    public boolean equalTo(Record other){
+        return this.value.equals(other.value) && this.key.equals(other.key);
+    }
 }
 
 
