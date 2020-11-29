@@ -385,8 +385,8 @@ public class Assignment2 {
 
 
     public static void main(String[] args) {
-        boolean[][] flights1 = {{false, false, true,true },
-                                {false, false, true,true },
+        boolean[][] flights1 = {{false, true, true,true },
+                                {true, false, true,true },
                                 {true, true, false,true },
                                 {true,true,true,false}};
 

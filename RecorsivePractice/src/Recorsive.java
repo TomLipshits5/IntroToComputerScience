@@ -1,7 +1,8 @@
 public class Recorsive {
     public static void main(String[] args){
         String num = "010";
-        System.out.println(toInt(num));
+        int[] weghit =   {3, 17, 26, 7, 9, 21, 6, 12, 13, 19, 8, 38};
+        binarysubset(weghit,165,0);
     }
     public static boolean isPalindrome(char[] a, int from, int to){
         boolean isPalindrome = false;
@@ -105,6 +106,39 @@ public class Recorsive {
     }
 
 
+    public static boolean subSetSum(int [] wegihts, int sum, int i){
+        boolean ans = false;
+        if(sum == 0){
+            ans = true;
+        }
+        else if (sum < 0 | i>=wegihts.length){
+            ans = false;
+        }
+        else{
+            ans = subSetSum(wegihts,sum-wegihts[i],i+1) || subSetSum(wegihts,sum,i+1);
+        }
+        return ans;
+    }
 
+
+    public static void binarysubset(int[] weights,int sum,int i){
+        int[] newArray = new int[weights.length];
+        for (int j = 0; j< weights.length; j++){
+            int tmp = weights[j];
+            weights[j] = 0;
+            if (!subSetSum(weights,sum,i)){
+                weights[j] = tmp;
+            }
+        }
+        for (int item : weights ){
+            if (item != 0 ){
+                System.out.print(1);
+            }
+            else
+                System.out.print(item);
+        }
+
+    }
+    //{3,  7, 9, 1 };
 }
 

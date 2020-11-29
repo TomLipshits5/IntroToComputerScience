@@ -1,4 +1,7 @@
+import java.sql.ResultSet;
 import java.util.Arrays;
+import java.util.List;
+
 import static  java.lang.Math.*;
 
 public class Math {
@@ -170,13 +173,15 @@ public class Math {
 
 
     public static void main(String[] args) {
-        Record r1 = new Record("053", "Banana");
-        Record r2 = new Record("053", "Banana");
+        Integer[] a = {1,2,3,4};
+        String[] b = {"Tom","Amit","Gefen"};
+        Integer[] g = new Integer[5];
+        DynamicArray<Integer> myList = new DynamicArray<Integer>(a);
+        DynamicArray<String> myList2 = new DynamicArray<String>(b);
+        for (int i = 0 ; i<myList.size(); i++){
+            System.out.println(myList.get(i));
 
-
-
-
-
+        }
     }
 
 
