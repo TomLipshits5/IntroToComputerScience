@@ -4,7 +4,7 @@ import java.util.List;
 
 import static  java.lang.Math.*;
 
-public class Math {
+public class MyMath {
     public static int GCD(int x, int y) {
         if (x <= 0 || y <= 0) {
             return 0;
@@ -175,6 +175,7 @@ public class Math {
 
 
     public static void main(String[] args) {
+<<<<<<< HEAD:helloworld/src/Math.java
         Integer[] a = {1,2,3,4};
         String[] b = {"Tom","Amit","Gefen"};
         Integer[] g = new Integer[5];
@@ -182,6 +183,14 @@ public class Math {
         DynamicArray<String> myList2 = new DynamicArray<String>(b);
         for (int i = 0 ; i<myList.size(); i++){
             System.out.println(myList.get(i));
+=======
+        Circle c = new Circle(3);
+        Shape c2 = new Circle(3);
+        Shape r = new Rectangle(2,2);
+        Shape r2 = new Square(2);
+        System.out.println(r2.toString());
+        System.out.println(r.equals(r2));
+>>>>>>> 3c1bb9c409584b58976027873bdfdd78757ed5d1:helloworld/src/MyMath.java
 
         }
     }
