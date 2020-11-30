@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import static  java.lang.Math.*;
 
-public class Math {
+public class MyMath {
     public static int GCD(int x, int y) {
         if (x <= 0 || y <= 0) {
             return 0;
@@ -172,12 +172,12 @@ public class Math {
 
 
     public static void main(String[] args) {
-        Record r1 = new Record("053", "Banana");
-        Record r2 = new Record("053", "Banana");
-
-
-
-
+        Circle c = new Circle(3);
+        Shape c2 = new Circle(3);
+        Shape r = new Rectangle(2,2);
+        Shape r2 = new Square(2);
+        System.out.println(r2.toString());
+        System.out.println(r.equals(r2));
 
     }
 
