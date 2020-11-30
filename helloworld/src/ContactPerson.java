@@ -1,4 +1,4 @@
-public class ContactPerson extends Record {
+public class ContactPerson extends Record<PhoneNumber> {
     //Fields:
     private String relationship;
 

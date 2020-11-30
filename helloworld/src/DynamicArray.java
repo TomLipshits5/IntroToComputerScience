@@ -17,7 +17,18 @@ public class DynamicArray <T> implements List <T> {
 
     @Override
     public boolean add(T element) {
-        T[] newArray = new T[];
+        if (element instanceof Class ){
+
+        }
+        if (element instanceof String){
+            String[] newArray = new String[this.size()+1];
+        }
+        else if (element instanceof Number){
+            Number[] newArray = new Number[this.size()+1];
+        }
+
+
+
         return false;
     }
 

@@ -302,7 +302,7 @@ public class Assignment2 {
             throw new IllegalArgumentException("Assignment is illegal.");
         }
         int[] tour = new int[n];
-        for (int i =0; i<assignment.length; i++){
+        for (int i =1; i<assignment.length; i++){
             if(assignment[i]){
                 int[] myStep = reverseMap(i,n);
                 tour[myStep[0]] = myStep[1];
@@ -312,7 +312,7 @@ public class Assignment2 {
     }
 
     // task19
-    // Creats and find a solution for the big trip problem.
+    // Creates and find a solution for the big trip problem.
     public static int[] solve(boolean[][] flights) {
         if (!isLegalInstance(flights)){
             throw new IllegalArgumentException("Illegal flights array.");
@@ -336,7 +336,7 @@ public class Assignment2 {
             throw new IllegalArgumentException("Solution timeout.");
         }
         else{
-            throw new IllegalArgumentException("There is no satisfying solution.");
+            return null;
         }
     }
 
@@ -345,6 +345,9 @@ public class Assignment2 {
     public static boolean solve2(boolean[][] flights) {
         int nVars = flights.length * flights.length;
         int[] tour1 = solve(flights);
+        if (tour1 == null){
+            return false;
+        }
         int[] tour2 = new int[tour1.length];
         int start = 1;
         int end = tour1.length-1;
@@ -385,17 +388,28 @@ public class Assignment2 {
 
 
     public static void main(String[] args) {
+<<<<<<< HEAD
         boolean[][] flights1 = {{false, true, true,true },
                                 {true, false, true,true },
                                 {true, true, false,true },
+=======
+        boolean[][] flights1 = {{false, false, false,true},
+                                {false, false, true,true },
+                                {false, true, false,true },
+>>>>>>> 45e2abcb5246ef19cefff5d6898c6d877a86426b
                                 {true,true,true,false}};
 
         boolean[][] flights = {{false, true, true },
                                  {true, false, true },
                                  {true, true, false }};
         boolean[][] flights2 = {{}};
+        boolean[] assignment = {true, true, false, false, false,
+                false,false, false, true, false};
         System.out.println(Arrays.toString(solve(flights1)));
         System.out.println((solve2(flights1)));
+        int[] cnf = decode(assignment, 3);
+//        System.out.println(Arrays.toString(cnf));
+//        System.out.println((map(0,-1,3)));
 
 
 

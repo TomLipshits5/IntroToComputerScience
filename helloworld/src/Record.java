@@ -27,8 +27,14 @@ public class Record <V>{
     public void  setValue(V value){
         this.value = value;
     }
-    public boolean equalTo(Record other){
-        return this.value.equals(other.value) && this.key.equals(other.key);
+    public boolean equals(Object other){
+        boolean equals = false;
+        if (other instanceof Record<?>){
+            equals = key.equals(((Record<?>)other).key) && value.equals(((Record<?>)other).value);
+        }
+
+
+        return equals;
     }
 
 
