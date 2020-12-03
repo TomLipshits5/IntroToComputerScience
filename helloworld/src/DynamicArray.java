@@ -1,13 +1,16 @@
 
-
-public class DynamicArray <T> implements List <T> {
+public class DynamicArray <T> implements List1 <T> {
     //Fields
-    T[] a;
+    Object[] a;
 
     //Constructor
-    public DynamicArray(T[] a){
+    public DynamicArray(Object[] a){
         this.a = a;
     }
+    public DynamicArray(){
+        this.a = new Object[0];
+    }
+
 
     //Methods
     @Override
@@ -17,18 +20,12 @@ public class DynamicArray <T> implements List <T> {
 
     @Override
     public boolean add(T element) {
-        if (element instanceof Class ){
-
+        Object[] newArray = new Object[a.length+1];
+        for (int i = 0; i<a.length; i++){
+            newArray[i] = a[i];
         }
-        if (element instanceof String){
-            String[] newArray = new String[this.size()+1];
-        }
-        else if (element instanceof Number){
-            Number[] newArray = new Number[this.size()+1];
-        }
-
-
-
+        newArray[newArray.length-1] = element;
+        a=newArray;
         return false;
     }
 
@@ -45,7 +42,7 @@ public class DynamicArray <T> implements List <T> {
 
     @Override
     public T get(int index) {
-        return a[index];
+        return (T)a[index];
     }
 
     @Override
@@ -69,6 +66,15 @@ public class DynamicArray <T> implements List <T> {
             return true;
         }
         return false;
+    }
+
+    public String toString(){
+        String s = "[";
+        for (Object i:a){
+            s=s + i+" ";
+        }
+        s=s+"]";
+        return s;
     }
 
 
