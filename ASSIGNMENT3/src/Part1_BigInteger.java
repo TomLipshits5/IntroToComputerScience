@@ -8,8 +8,10 @@ class Part1_BigInteger{
     //Sum the value of all of the numbers smaller than n.
     public static BigInteger sumSmaller(BigInteger n){
         BigInteger sum =  new BigInteger("0");
-        for (int i = 0; i<n.intValue(); i++) {
-            sum = sum.add(BigInteger.valueOf(i));
+        BigInteger i = new BigInteger("1");
+        while(i.compareTo(n)<0){
+            sum = sum.add(i);
+            i = i.add(BigInteger.ONE);
         }
 
         return sum;
@@ -38,7 +40,7 @@ class Part1_BigInteger{
         }
 
         for(BigInteger p = new BigInteger("2"); p.multiply(p).compareTo(n) < 0 || p.multiply(p).compareTo(n) ==0; p = p.add(BigInteger.ONE)){
-            if (n.mod(p).intValue() == 0)
+            if (n.mod(p).compareTo(BigInteger.ZERO) == 0)
                 return false;
         }
         return true;
@@ -74,15 +76,14 @@ class Part1_BigInteger{
 //        System.out.println(sumSmaller(bi7)); // 21
         BigInteger biHigh = new BigInteger("99999");
 //        System.out.println(sumSmaller(biHigh)); // 4999850001
-        BigInteger bi1 = new BigInteger("2147521921");
+        BigInteger bi1 = new BigInteger("200000");
 //        System.out.println(randomPrime(2).toString());
 
 //        BigInteger myInt = new BigInteger(2, new Random());
 
 //        BigInteger rNum = randomPrime(7);
-        System.out.println(isPrime(bi1));
-//        System.out.println(bi0.add(bi7));
-//        System.out.println(bi7.compareTo(bi7));
+        System.out.println(biHigh.mod(bi7).getClass());
+
 
     }
 }

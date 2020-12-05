@@ -5,15 +5,18 @@ class Part1_Change {
     // Finds if there is a way to split to value n to any sum of the given instances in the array coins.
     public static boolean Change(int[] coins, int n, int to) {
         boolean ans = false;
-        if (to >= 0 && coins[to] != 0) {
+        if (to >= 0) {
             //recursive base case.
             if (n - coins[to] == 0) {
                 ans = true;
-            //state change to base case.
-            } else if (n > coins[to]) {
+                //state change to base case.
+            } else if (n > coins[to] && coins[to]!=0) {
                 ans = ans || Change(coins, n - coins[to], to);
             } else if (coins[to] > n) {
                 ans = ans || Change(coins, n, to - 1);
+            }
+            if (!ans){
+                ans = ans || Change(coins,n,to-1);
             }
         }
         return ans;
@@ -39,7 +42,7 @@ class Part1_Change {
                 } else if (to > 0) {
                     ans = ans || changeLimited(coins, n, numOfCoinsToUse, to - 1);
                 }
-            //state change to base case.
+                //state change to base case.
             } else if (coins[to] >= n && to > 0) {
                 ans = ans || changeLimited(coins, n, numOfCoinsToUse, to - 1);
             } else if (n > coins[to]) {
@@ -74,7 +77,7 @@ class Part1_Change {
                 } else if (to > 0) {
                     s = s + printChangeLimited(coins, n, numOfCoinsToUse, to - 1);
                 }
-            ////state change to base case.
+                ////state change to base case.
             } else if (coins[to] >= n && to > 0) {
                 s = s + printChangeLimited(coins, n, numOfCoinsToUse, to - 1);
             } else if (n > coins[to]) {
@@ -107,10 +110,10 @@ class Part1_Change {
     }
 
     public static void main(String[] args) {
-        int[] Coins = {0, 7, 12};
-        int n = 10;
-        int numOfCoins = 1;
+        int[] Coins = {3,7, 12};
+        int n = 14;
+        int numOfCoins = 2;
 //        System.out.println(changeLimited(Coins,n,numOfCoins));
-        System.out.println(changeLimited(Coins, n, numOfCoins));
+        System.out.println(changeLimited(Coins, n,numOfCoins));
     }
 }
