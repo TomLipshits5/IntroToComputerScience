@@ -1,6 +1,6 @@
-import java.sql.ResultSet;
+
 import java.util.Arrays;
-import java.util.List;
+
 
 import static  java.lang.Math.*;
 
@@ -184,7 +184,7 @@ public class MyMath {
         System.out.println(list.toString());
         list.add(4);
         System.out.println(list.toString());
-        List1<String> tom = new DynamicArray<String>();
+        List<String> tom = new DynamicArray<String>();
     }
 
 

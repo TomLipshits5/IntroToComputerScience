@@ -1,4 +1,4 @@
-public interface List1<T> {
+public interface List<T> {
 
         String name = "TomCooll";
 

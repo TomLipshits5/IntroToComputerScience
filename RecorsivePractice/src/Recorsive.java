@@ -103,7 +103,7 @@ public class Recorsive {
     }
 
 
-<<<<<<< HEAD
+
     public static boolean subSetSum(int [] wegihts, int sum, int i){
         boolean ans = false;
         if(sum == 0){
@@ -138,7 +138,6 @@ public class Recorsive {
 
     }
     //{3,  7, 9, 1 };
-=======
->>>>>>> 45e2abcb5246ef19cefff5d6898c6d877a86426b
+
 }
 

@@ -1,7 +1,7 @@
 
-public class DynamicArray <T> implements List1 <T> {
+public class DynamicArray <T> implements List <T> {
     //Fields
-    Object[] a;
+    private Object[] a;
 
     //Constructor
     public DynamicArray(Object[] a){
@@ -70,8 +70,12 @@ public class DynamicArray <T> implements List1 <T> {
 
     public String toString(){
         String s = "[";
-        for (Object i:a){
-            s=s + i+" ";
+        for (int i = 0; i<a.length;i++){
+            if (i == 0){
+                s = s + a[i];
+            }
+            else
+                s=s +", "+ a[i];
         }
         s=s+"]";
         return s;
