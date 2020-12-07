@@ -58,12 +58,10 @@ class Part2_Change {
         }
         return ans;
     }
-    //ans = ans +cubaSolver(coins,nCuc-coins[index],nCup,index) + cubaSolver(coins,nCuc,nCup-coins[index],index) +cubaSolver(coins,nCuc,nCup-3*coins[index],index);
-    //            ans = ans + cubaSolver(coins,nCuc,nCup,index+1);
-
     //Task 2.6
     public static int changeInCuba(int cuc) {
-        return 1;
+        int[] coins = {1,3,3,5,9,10,15,20,30,50,60,100,150,300};
+        return cubaSolver(coins,cuc*3,0);
     }
 
     public static void main(String[] args) {
@@ -71,7 +69,7 @@ class Part2_Change {
         int[] CoinsCup = {1,3,3,5,9,10,15,20,30,50,60,100,150,300};
         int n = 2;
         int ans = cubaSolver(CoinsCup,150,0);
-        System.out.println(ans);
+        System.out.println(changeInCuba(20));
 
 
 
