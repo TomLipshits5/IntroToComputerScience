@@ -14,10 +14,12 @@ public class Bit {
 
 
     //Methods:
+    //Return the value off Bit
     public boolean getValue(){
         return value;
     }
     //Task 3.2
+    //Return int representation of Bit
     public int toInt(){ 
         int ans = 0;
         if (value)
@@ -26,6 +28,7 @@ public class Bit {
 
     }
     //Task 3.3
+    //Return string representation of Bit
     public String toString(){
         String ans = "";
         return ans + this.toInt();

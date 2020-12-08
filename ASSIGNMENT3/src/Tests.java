@@ -6,9 +6,9 @@ public class Tests {
 
 
     public static void main(String[] args) {
-        runAllTests();    //Runs all the tests
+//        runAllTests();    //Runs all the tests
 //        testPartA();      //Runs all tests for part A
-        //testPartB();      //Runs all tests for part B
+        testPartB();      //Runs all tests for part B
         //testQ1E1();       //Runs tests for 1.1
         //testQ1E2();       //Runs tests for 1.2
         //testQ1E3();       //Runs tests for 1.3
