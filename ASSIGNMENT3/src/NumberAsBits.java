@@ -7,6 +7,7 @@ public class NumberAsBits {
     //Constructors:
     //Task 3.4
     public NumberAsBits(Bit[] bits) {
+        //Check input.
         if (bits == null){
             throw new IllegalArgumentException("NmberAsBits can't be null");
         }

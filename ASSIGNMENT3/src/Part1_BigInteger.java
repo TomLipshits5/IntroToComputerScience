@@ -9,11 +9,10 @@ class Part1_BigInteger{
     public static BigInteger sumSmaller(BigInteger n){
         BigInteger sum =  new BigInteger("0");
         BigInteger i = new BigInteger("1");
-        while(i.compareTo(n)<0){
+        while(i.compareTo(n)<0){    //loop throw and sum all numbers smaller than n.
             sum = sum.add(i);
             i = i.add(BigInteger.ONE);
         }
-
         return sum;
     }
 
@@ -24,8 +23,8 @@ class Part1_BigInteger{
     public static void printRandoms(int n){
         Random rg = new Random();
         int i = 0;
-        while(i<n){
-            System.out.println(rg.nextInt());
+        while(i<n){       //repeat the print action fot n time.
+            System.out.println(rg.nextInt());           //generate a random number.
             i++;
         }
     }
@@ -35,10 +34,11 @@ class Part1_BigInteger{
     //Task 1.3
     // Find out if n is a prime number.
     public static boolean isPrime(BigInteger n){
+        // input check for edge cases.
         if (n.intValue() == 0 || n.intValue()==1){
             return false;
         }
-
+        //Compare n module p to zero.
         for(BigInteger p = new BigInteger("2"); p.multiply(p).compareTo(n) < 0 || p.multiply(p).compareTo(n) ==0; p = p.add(BigInteger.ONE)){
             if (n.mod(p).compareTo(BigInteger.ZERO) == 0)
                 return false;
@@ -49,13 +49,13 @@ class Part1_BigInteger{
 
 
     //Task 1.4
-    //Return a BigInteger in rang of 0 to 2^n.
+    //Return a BigInteger in range of 0 to 2^n.
     public static BigInteger randomPrime(int n){
         BigInteger randBig = new BigInteger("0");
         boolean isPrime = false;
         while(!isPrime) {
-            BigInteger myInt = new BigInteger(n, new Random());
-            isPrime = isPrime(myInt);
+            BigInteger myInt = new BigInteger(n, new Random()); //generate a random number in range 0 to 2^n.
+            isPrime = isPrime(myInt);                   //checks if the random number is prime.
             randBig = myInt;
         }
 
