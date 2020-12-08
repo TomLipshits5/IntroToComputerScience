@@ -13,5 +13,6 @@ public class Main {
         System.out.println((number.base2().length()));
         System.out.println(number.toString());
 //        int n =8589934592;
+//        throw new NullPointerException();
     }
 }
