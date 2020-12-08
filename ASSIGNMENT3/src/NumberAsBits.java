@@ -10,14 +10,17 @@ public class NumberAsBits {
         //Check input.
         if (bits == null){
             throw new IllegalArgumentException("NmberAsBits can't be null");
-        }
-        this.bits = new Bit[bits.length];
-        for (int i = 0; i<bits.length;i++){
-            if (bits[i] == null){
-                throw new IllegalArgumentException("A bit in NumberAsBits can't be null");
-            }
-            else{
-                this.bits[i] = new Bit(bits[i].getValue());
+        }if (bits.length == 0){
+            this.bits = new Bit[1];
+            this.bits[0] = new Bit(false);
+        }else {
+            this.bits = new Bit[bits.length];
+            for (int i = 0; i < bits.length; i++) {
+                if (bits[i] == null) {
+                    throw new IllegalArgumentException("A bit in NumberAsBits can't be null");
+                } else {
+                    this.bits[i] = new Bit(bits[i].getValue());
+                }
             }
         }
 
@@ -35,27 +38,12 @@ public class NumberAsBits {
         return ans;
     }
     //Task 3.6
-    public String toString() {
-        String ans ="0";
-        String tmp ;
-        int power ;
-        int base = 2;
-        for (int i = 0 ; i<bits.length; i++){
-            if (bits[i].toInt() == 1){
-                power = bits.length-1-i;
-                tmp = "1";
-                while(power>0){
-                    tmp = multiply(tmp,2);
-                    power--;
-                }
-                if (ans.length()>tmp.length()){
-                    ans = add(ans,tmp);
-                }else{
-                    ans = add(tmp,ans);
-                }
-            }
-        }
+    public String toString(){
+        String ans =bits[0].toString();
+        for (int i =1; i<bits.length; i++){
+            ans = add(multiply(ans,2),bits[i].toString());
 
+        }
         return ans;
     }
 
