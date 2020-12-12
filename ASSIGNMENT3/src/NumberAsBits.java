@@ -8,13 +8,8 @@ public class NumberAsBits {
     //Task 3.4
     public NumberAsBits(Bit[] bits) {
         //Check input.
-        if (bits == null){
+        if (bits == null) {
             throw new IllegalArgumentException("NmberAsBits can't be null");
-
-        // In case array is empty.
-        }if (bits.length == 0){
-            this.bits = new Bit[1];
-            this.bits[0] = new Bit(false);
 
         }else {
             this.bits = new Bit[bits.length];
@@ -33,9 +28,11 @@ public class NumberAsBits {
     //Task 3.5
     public String base2() {
         String ans ="";
-        for (Bit bit : bits) {
-            ans = ans + bit.toString();
+        if(bits.length != 0) {
+            for (Bit bit : bits) {
+                ans = ans + bit.toString();
 
+            }
         }
 
         return ans;
@@ -44,6 +41,9 @@ public class NumberAsBits {
     // return a decimal representation of the binary number as a string.
     //  using Hint 3.5 ans two internal class function to summarise the Decimal value of the Bits array.
     public String toString(){
+        if (bits.length == 0){
+            return "";
+        }
         String ans =bits[0].toString();
         for (int i =1; i<bits.length; i++){
             ans = add(multiply(ans,2),bits[i].toString());
