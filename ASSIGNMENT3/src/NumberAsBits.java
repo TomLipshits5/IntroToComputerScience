@@ -17,7 +17,7 @@ public class NumberAsBits {
                 if (bits[i] == null) {    //Check there is no null element in the array.
                     throw new IllegalArgumentException("A bit in NumberAsBits can't be null");
                 } else {
-                    this.bits[i] = new Bit(bits[i].getValue());
+                    this.bits[i] = bits[i];
                 }
             }
         }

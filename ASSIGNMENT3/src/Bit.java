@@ -8,16 +8,10 @@ public class Bit {
     public Bit(boolean value){
         this.value = value;
     }
-    public Bit(){
-        this.value = true;
-    }
 
 
-    //Methods:
-    //Return the value off Bit
-    public boolean getValue(){
-        return value;
-    }
+
+
     //Task 3.2
     //Return int representation of Bit
     public int toInt(){ 

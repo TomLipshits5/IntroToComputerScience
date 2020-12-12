@@ -1,5 +1,3 @@
-
-
 class Part2_Change {
 
     //Task 2.4 //Assist function.
