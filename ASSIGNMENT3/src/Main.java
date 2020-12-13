@@ -8,7 +8,7 @@ public class Main {
                 new Bit(false),new Bit(false),new Bit(false),new Bit(false),new Bit(false),new Bit(false),new Bit(false),new Bit(false),
                 new Bit(true),new Bit(true),new Bit(true),new Bit(true),new Bit(true),};
         Bit[] bits1 = {};
-        NumberAsBits number = new NumberAsBits (bits1);
+        NumberAsBits number = new NumberAsBits (bits);
 //        System.out.println(bits.length);
 
         System.out.println((number.toString()));
