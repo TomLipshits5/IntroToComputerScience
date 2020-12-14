@@ -1,3 +1,5 @@
+import java.util.NoSuchElementException;
+
 public class DynamicArrayIterator<T> implements Iterator<T> {
     //Fields:
     private DynamicArray<T> array;
@@ -16,7 +18,7 @@ public class DynamicArrayIterator<T> implements Iterator<T> {
     @Override
     public T next() {
         if (!hasNext()){
-            throw new IllegalArgumentException("index out of range");
+            throw new NoSuchElementException();
         }
         T next = array.get(index);
         index++;

@@ -1,29 +1,31 @@
+import java.util.NoSuchElementException;
+
 public class LinkedListIterator<T> implements Iterator<T> {
 
     //Fields:
 
-    private LinkedList<T> list;
-    private int index;
+    private Link current;
+
 
     //Constructors:
-    public LinkedListIterator(LinkedList<T> list){
-        this.list = list;
-        index = 0;
+    public LinkedListIterator(Link<T> current){
+        this.current = current;
+
     }
 
 
     @Override
     public boolean hasNext() {
-        return index<list.size();
+        return current!=null;
     }
 
     @Override
     public T next() {
         if (!hasNext()){
-         throw new IllegalArgumentException("index out of range");
+         throw new NoSuchElementException();
         }
-        T next = list.get(index);
-        index++;
+        T next = (T)current.getData();
+        current = current.getNext();
         return next;
     }
 }
