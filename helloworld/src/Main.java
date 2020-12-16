@@ -1,26 +1,15 @@
 
 public class Main {
-    public static void main(String[] args) {
-        SetAsDynamicArray<Integer> set1 = new SetAsDynamicArray<Integer>();
-        SetAsDynamicArray<Integer> set2 = new SetAsDynamicArray<Integer>();
+    public static void main(String[] args){
+        int[] coins = {1,2,3};
+        int n = randomElement(coins);
+        System.out.println(n);
 
-        set1.add(1);
-        set1.add(2);
-        set1.add(3);
-        set1.add(4);
-        set2.add(2);
-        set2.add(3);
-        set2.add(4);
-        set2.add(5);
-//        System.out.println(SetOperations.subset(set1,set2));
-//        Set<Integer> inter = SetOperations.intersection(set1,set2);
-//        System.out.println(inter.toString());
-        Set<Integer> union = SetOperations.union(set1,set2);
-        System.out.println(union.toString());
+    }
 
 
-
-
-
+    public static int randomElement(int[] array){
+        int index = (int)(Math.random()*array.length);
+        return array[index];
     }
 }
