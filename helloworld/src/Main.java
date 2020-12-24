@@ -1,15 +1,15 @@
 
+
 public class Main {
+
     public static void main(String[] args){
-        int[] coins = {1,2,3};
-        int n = randomElement(coins);
-        System.out.println(n);
+        DynamicArray ls = new DynamicArray<>();
+        ls.add(1);
+        ls.add(ls.get(1)+1);
+
+        }
+
 
     }
 
-
-    public static int randomElement(int[] array){
-        int index = (int)(Math.random()*array.length);
-        return array[index];
-    }
 }

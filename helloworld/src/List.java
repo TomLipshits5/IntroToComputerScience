@@ -1,7 +1,5 @@
 public interface List<T> extends Iterable<T>{
 
-        String name = "TomCooll";
-
     //Returns the number of elements in this list.
     public int size();
 

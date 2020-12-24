@@ -1,6 +1,6 @@
 public class DynamicArray<T> implements List<T> {
     //Fields
-    public static int DEFUALT_CAPACITY = 16;
+    public static int DEFAULT_CAPACITY = 16;
     public static int INCREMENT_SIZE = 10;
     private Object[] a;
     private int size = 0;
@@ -12,7 +12,7 @@ public class DynamicArray<T> implements List<T> {
     }
 
     public DynamicArray() {
-        this.a = new Object[DEFUALT_CAPACITY];
+        this.a = new Object[DEFAULT_CAPACITY];
     }
 
     public DynamicArray(int capacity) {
