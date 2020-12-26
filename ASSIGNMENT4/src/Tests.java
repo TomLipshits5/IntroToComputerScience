@@ -1,10 +1,10 @@
 import java.util.*;
 public class Tests {
     public static void main(String[] args) {
-        //runAllTests();    //Runs all the tests
-        testPartA();
-        testPartB();
-        //testPartC();
+        runAllTests();    //Runs all the tests
+//        testPartA();
+//        testPartB();
+//        testPartC();
         //testQ1E1();       //Runs tests for 1.1
         //testQ1E2();       //Runs tests for 1.2
         //testQ2E1a();      //Runs tests for 2.1 addFirst
@@ -23,19 +23,19 @@ public class Tests {
         //testQ2E7a();      //Runs tests for 2.7 shiftRight
 //        testQ2E7b();      //Runs tests for 2.7 shiftLeft
 //        testQ2E8();       //Runs tests for 2.8
-        //testQ3E1();       //Runs tests for 3.1 requires the implementation of toString in BinaryNumber
-        //testQ3E3();       //Runs tests for 3.3
-        //testQ3E4();       //Runs tests for 3.4
-        //testQ3E5a();      //Runs tests for 3.5 tests negation only
-        //testQ3E5b();      //Runs tests for 3.5 tests correct form of addition with negation
-        //testQ3E6();       //Runs tests for 3.6
-        //testQ3E7();       //Runs tests for 3.7
-        //testQ3E8();       //Runs tests for 3.8
-        //testQ3E9();       //Runs tests for 3.9
-        //testQ3E10();       //Runs tests for 3.10
-        //testQ3E11();       //Runs tests for 3.11
-        //testQ3E12();       //Runs tests for 3.12
-        //testQ3E13();       //Runs tests for 3.13
+//        testQ3E1();       //Runs tests for 3.1 requires the implementation of toString in BinaryNumber
+//        testQ3E3();       //Runs tests for 3.3
+//        testQ3E4();       //Runs tests for 3.4
+//        testQ3E5a();      //Runs tests for 3.5 tests negation only
+//        testQ3E5b();      //Runs tests for 3.5 tests correct form of addition with negation
+//        testQ3E6();       //Runs tests for 3.6
+//        testQ3E7();       //Runs tests for 3.7
+//        testQ3E8();       //Runs tests for 3.8
+//        testQ3E9();       //Runs tests for 3.9
+//        testQ3E10();       //Runs tests for 3.10
+//        testQ3E11();       //Runs tests for 3.11
+//        testQ3E12();       //Runs tests for 3.12
+//        testQ3E13();       //Runs tests for 3.13
     }
 
     private static void runAllTests() {
