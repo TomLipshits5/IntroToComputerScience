@@ -175,16 +175,27 @@ public class MyMath {
 
 
     public static void main(String[] args) {
-        DynamicArray<Integer> list = new DynamicArray<Integer>();
-        list.add(1);
-        System.out.println(list.toString());
-        list.add(2);
-        System.out.println(list.toString());
-        list.add(3);
-        System.out.println(list.toString());
-        list.add(4);
-        System.out.println(list.toString());
-        List<String> tom = new DynamicArray<String>();
+        LinkedList <Integer> ls = new LinkedList<Integer>(2);
+//        System.out.println(ls.toString());
+        ls.addFirst(1);
+//        System.out.println(ls.toString());
+        ls.add(3);
+//        System.out.println(ls.toString());
+        ls.add(1,4);
+//        System.out.println(ls.toString());
+        ls.set(1,15);
+        System.out.println(ls.remove(1));
+        System.out.println(ls.toString());
+        System.out.println(ls.contains(2));
+        System.out.println(ls.contains(20));
+
+
+
+
+
+
+
+
     }
 
 

@@ -1,6 +1,4 @@
-public interface List<T> {
-
-        String name = "TomCooll";
+public interface List<T> extends Iterable<T>{
 
     //Returns the number of elements in this list.
     public int size();
