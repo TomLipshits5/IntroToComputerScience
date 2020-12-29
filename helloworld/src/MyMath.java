@@ -1,6 +1,6 @@
 
 import java.util.Arrays;
-
+import java.util.Comparator;
 
 import static  java.lang.Math.*;
 
@@ -169,25 +169,31 @@ public class MyMath {
     public static void hanoiTour(int n, char source, char destinatoin,char extra){
 
     }
-    
+
+    public static <T extends Comparable<T>> void insertionSort(T[] array){
+        for(int i =1 ; i< array.length; i++){
+            insert(array,i);
+        }
+    }
+
+    public static <T extends Comparable<T>> void insert(T[] array , int index){
+        T value = array[index];
+        while(index>0 && array[index-1].compareTo(value) > 0){
+            array[index] = array[index-1];
+            index--;
+        }
+        array[index] = value;
+    }
+
 
 
 
 
     public static void main(String[] args) {
-        LinkedList <Integer> ls = new LinkedList<Integer>(2);
-//        System.out.println(ls.toString());
-        ls.addFirst(1);
-//        System.out.println(ls.toString());
-        ls.add(3);
-//        System.out.println(ls.toString());
-        ls.add(1,4);
-//        System.out.println(ls.toString());
-        ls.set(1,15);
-        System.out.println(ls.remove(1));
-        System.out.println(ls.toString());
-        System.out.println(ls.contains(2));
-        System.out.println(ls.contains(20));
+
+        Integer[] array = {7,5,2,6,78,5,4,3,2,7,1};
+        insertionSort(array);
+        System.out.println(Arrays.toString(array));
 
 
 

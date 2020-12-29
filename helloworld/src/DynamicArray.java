@@ -1,3 +1,5 @@
+import java.util.NoSuchElementException;
+
 public class DynamicArray<T> implements List<T> {
     //Fields
     public static int DEFAULT_CAPACITY = 16;
@@ -92,6 +94,7 @@ public class DynamicArray<T> implements List<T> {
         }
         return true;
     }
+
 
     @Override
     public boolean contains(T element) {

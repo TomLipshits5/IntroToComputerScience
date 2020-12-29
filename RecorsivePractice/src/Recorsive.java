@@ -138,6 +138,53 @@ public class Recorsive {
 
     }
     //{3,  7, 9, 1 };
+    public static int[] nPawens(int n, int d){
+        int [] board = new int[n];
+        if(nPawens(n,d,0,0,board)){
+            return board;
+        }
+        else{
+            return new int[]{};
+        }
+    }
 
+    public static boolean nPawens(int n, int d, int row, int col, int[] pawens){
+        boolean ans = false;
+
+        if(row == n-1 && addPawen(pawens,d,row,col)){
+            ans = true;
+        }
+        else if(col>=n || row>=n){
+            ans = false;
+        }
+        else if(addPawen(pawens,d,row,col)){
+            ans =nPawens(n,d,row+1,0,pawens) ;
+        }
+        else if(!addPawen(pawens,d,row,col )){
+            ans =nPawens(n,d,row,col+1,pawens);
+        }
+
+        return ans;
+    }
+
+    public static boolean addPawen(int[] board, int d, int row, int col){
+        for(int i =0 ; i<board.length; i++){
+            if(i< row && distance(i,board[i],row,col)<=d){
+                return false;
+            }
+        }
+        board[row] = col;
+        return true;
+    }
+
+
+
+
+
+    public static int distance(int row1, int col1, int row2, int col2){
+        int horizentalD = Math.abs(col2-col1);
+        int verticalD = Math.abs(row2-row1);
+        return (horizentalD + verticalD);
+    }
 }
 
