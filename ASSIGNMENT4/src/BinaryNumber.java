@@ -93,7 +93,7 @@ public class BinaryNumber implements Comparable<BinaryNumber> {
     //=========================== Intro2CS 2021, ASSIGNMENT 4, TASK 3.4 ================================================
     //Sum the binary value of two BinaryNumbers and returns the summation.
     public BinaryNumber add(BinaryNumber addMe) {
-        if(addMe == null){                      //Input check
+        if(addMe == null || !addMe.isLegal()){                      //Input check
             throw new IllegalArgumentException("Can't add null");
         }
         //Equalizing numbers length.
@@ -127,9 +127,7 @@ public class BinaryNumber implements Comparable<BinaryNumber> {
         }
         addMe.bits.reduce();    //Fixing the added number back to a legal number.
         ans.bits.reduce();      //Reducing the ans.
-        if(!ans.isLegal()){
-            throw new IllegalArgumentException("Can't add an illegal number");
-        }
+
         return ans;
     }
 
@@ -183,28 +181,8 @@ public class BinaryNumber implements Comparable<BinaryNumber> {
         if(other ==null ||!isLegal() || !other.isLegal()){              //Input Check.
             throw new IllegalArgumentException("Can't use compareTo with an illegal number");
         }
-        int myLast = bits.getLast().toInt();
-        int otherLast = other.bits.getLast().toInt();
-        if(myLast != otherLast){                    //Check for negative positive numbers.
-            return otherLast-myLast;
-        }
-        if(length() != other.length()){             //Check fot length difference.
-            if(myLast == 0){
-                return (int)Math.signum(length()-other.length());
-            }else{
-                return (int)Math.signum(-1*(length()-other.length()));
-            }
-        }
-        Iterator<Bit> myIt = bits.iterator();
-        Iterator<Bit> otherIt = other.bits.iterator();
-        while(myIt.hasNext()){                      //Check each bit.
-            int myNext = myIt.next().toInt();
-            int otherNext = otherIt.next().toInt();
-            if(myNext != otherNext){
-                return (int)Math.signum(myNext - otherNext);
-            }
-        }
-        return 0;
+        BinaryNumber otherNum = new BinaryNumber(other);
+        return subtract(other).signum();
     }
 
     //=========================== Intro2CS 2021, ASSIGNMENT 4, TASK 3.9 ================================================
@@ -215,8 +193,15 @@ public class BinaryNumber implements Comparable<BinaryNumber> {
             throw new RuntimeException("I am illegal.");// Do not change this line
 
         //Check if the number is in Integer range.
-        if((bits.getLast().toInt() == 0 && length()>32) || (bits.getLast().toInt() ==1 && length()>= 33 && bits.getNumberOfOnes()>2)){
+        if((bits.getLast().toInt() == 0 && length()>32) || (bits.getLast().toInt() ==1 && length()> 33)){
             throw new RuntimeException("Number out of range for Integer try this.toIntString");
+        }
+        if(length() == 33){
+            int last = bits.removeLast().toInt();
+            if (last != bits.getLast().toInt()){
+                throw new RuntimeException("Number out of range for Integer try this.toIntString");
+            }
+            bits.addLast(new Bit(last));
         }
         double ans = 0;
         double power = 0;
@@ -264,6 +249,7 @@ public class BinaryNumber implements Comparable<BinaryNumber> {
                 ans = ans.add(me);
             }
             me.bits.addFirst(new Bit(0));       //Adding Zeroes according to the position of the number.
+            me.bits.reduce();
         }
         ans.bits.reduce();
         return ans;
@@ -376,14 +362,13 @@ public class BinaryNumber implements Comparable<BinaryNumber> {
         // Do not remove or change the next two lines
         if (!isLegal()) // Do not change this line
             throw new RuntimeException("I am illegal.");// Do not change this line
-        //
-        String ans = "";
+
         BinaryNumber me = new BinaryNumber(this);
         Boolean isNeg = me.bits.getLast().toInt() == 1;
         if(isNeg){          //Negative numbers handling
             me = me.negate();
         }
-        ans = "0";
+        String ans = "0";
         while(me.length()>0) {          //Using the Tip provided in assignment 3 and the assist function constructing the String decimal representation
             ans = add(multiply(ans, 2), me.bits.removeLast().toString());
         }
