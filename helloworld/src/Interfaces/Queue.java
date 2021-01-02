@@ -1,3 +1,4 @@
+package Interfaces;
 public interface Queue<T> {
 
     //return true is line is empty

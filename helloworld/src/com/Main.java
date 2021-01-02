@@ -1,17 +1,15 @@
-<<<<<<< HEAD:helloworld/src/com/Main.java
 package com;
-=======
->>>>>>> 9eb6263c9ee1997bca74e161df114adbff43051a:helloworld/src/Main.java
+import Interfaces.*;
 
 public class Main {
     public static void main(String[] args){
-<<<<<<< HEAD:helloworld/src/com/Main.java
+
         DynamicArray ls = new DynamicArray<>();
         ls.add(1);
 
-=======
+
         System.out.println(postFix("67+5*4+3*2+1*"));
->>>>>>> 9eb6263c9ee1997bca74e161df114adbff43051a:helloworld/src/Main.java
+
 
 
 
@@ -47,5 +45,6 @@ public class Main {
         }
         return myStack.pop();
     }
+}
 
 

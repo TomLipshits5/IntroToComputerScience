@@ -1,3 +1,5 @@
+package com;
+import Interfaces.*;
 public class MultiFilter<T> implements Filter<T> {
 
     //Fields:

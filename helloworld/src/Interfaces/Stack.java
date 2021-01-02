@@ -1,3 +1,4 @@
+package Interfaces;
 public interface Stack <T>{
 
     //return true if the stack is empty

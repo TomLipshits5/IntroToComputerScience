@@ -1,3 +1,5 @@
+package com;
+import Interfaces.*;
 import java.util.Iterator;
 
 public class SmallTwinPrimesIterator implements Iterator{
