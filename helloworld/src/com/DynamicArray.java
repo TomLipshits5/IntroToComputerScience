@@ -1,5 +1,9 @@
+<<<<<<< HEAD:helloworld/src/com/DynamicArray.java
 package com;
 import Interfaces.*;
+=======
+import java.util.NoSuchElementException;
+>>>>>>> 9eb6263c9ee1997bca74e161df114adbff43051a:helloworld/src/DynamicArray.java
 
 public class DynamicArray<T> implements List<T> {
     //Fields
@@ -95,6 +99,7 @@ public class DynamicArray<T> implements List<T> {
         }
         return true;
     }
+
 
     @Override
     public boolean contains(T element) {

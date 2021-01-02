@@ -81,7 +81,6 @@ public class NumberAsBits {
             }
         }
         return ans;
-
     }
     //Multiply a number represented as a string by an integer,num2 is limited by Integer.MAX.VALUE, return String.
         //Repeat the add function for num2 times.

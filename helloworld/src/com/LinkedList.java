@@ -28,6 +28,7 @@ public class LinkedList<T> implements List<T> {
 
     public LinkedList() {
         first = null;
+
     }
 
 
@@ -43,8 +44,9 @@ public class LinkedList<T> implements List<T> {
             throw new IllegalArgumentException("element can't be null");
         }
 
-        if (size == 0) {
-            addFirst(element);
+        if (isEmpty()) {
+            first = new Link<>(element);
+
         } else {
             Link<T> current = first;
             Link<T> newLink = new Link<T>(element);
@@ -52,20 +54,18 @@ public class LinkedList<T> implements List<T> {
                 current = current.getNext();
             }
             current.setNext(newLink);
-            size++;
+
         }
-        return false;
+        size++;
+        return true;
     }
 
     public void addFirst(T element) {
         if (element == null) {
             throw new IllegalArgumentException("element can't be null");
         }
-        if (first == null) {
-            first = new Link<T>(element);
-        } else {
-            first = new Link<>(element, first);
-        }
+        first = new Link<>(element, first);
+
         size++;
     }
 
@@ -127,30 +127,38 @@ public class LinkedList<T> implements List<T> {
             current = current.getNext();
             counter++;
         }
-        return current.getData();
+        return (T)current.getData();
     }
 
     @Override
-    public boolean remove(T element) {
-        if (first.getData().equals(element)) {
-            first = first.getNext();
-        }
-        boolean found = false;
-        for (Link<T> current = first; current.getNext() != null && !found; current = current.getNext()) {
-            if (current.getNext().getData().equals(element)) {
-                Link<T> prev = current;
+    public boolean remove(Object toRemove) {
+        Link<T> current = first;
+        Link<T> prev = current;
+        boolean removed = false;
+        while (current != null & !removed) {
+            if ((current.getData()).equals(toRemove)) {
+                // if the first link should be removed
+                if (current == first) {
+                    first = first.getNext();
+                }
+                else {
+                    prev.setNext(current.getNext());
+                }
+                removed = true;
+            }
+            else {
+                prev = current;
                 current = current.getNext();
-                prev.setNext(current.getNext());
-                found = true;
             }
         }
-        return false;
+        size--;
+        return removed;
     }
 
     @Override
     public boolean contains(T element) {
         Link<T> current = first;
-        while (current.getNext() != null) {
+        while (current != null) {
             if (current.getData().equals(element)) {
                 return true;
             }
@@ -161,7 +169,7 @@ public class LinkedList<T> implements List<T> {
 
     @Override
     public boolean isEmpty() {
-        return size == 0;
+        return first == null;
     }
 
     public String toString() {
@@ -169,7 +177,6 @@ public class LinkedList<T> implements List<T> {
         for (Link<T> current = first; current != null; current = current.getNext()) {
             s = s + current.getData() + ", ";
         }
-        s = s.substring(0, s.length());
         s = s + "]";
         return s;
     }
