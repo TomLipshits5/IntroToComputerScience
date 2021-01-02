@@ -1,6 +1,6 @@
 /*---------------------------------------
- Genuine author: <name>, I.D.: <id number>
- Date: xx-xx-2020 
+Genuine author: Tom Lipshits, I.D.: 316005370
+ Date: 29-12-2020
 ---------------------------------------*/
 
 import java.util.Iterator;
@@ -13,50 +13,32 @@ public class PrimeIterator implements Iterator<Integer> {
     //Constructor, initialise a linked list ans add the first prime number 2.
     public PrimeIterator() {
         // task 0
-        primes = new LinkedList<Integer>();
+        primes = new DynamicArray<>();
         primes.add(2);
     }
 
     //return true a long as the user don't request a prime number bigger than INTEGER.MAX_VALUE
     public boolean hasNext() {
         // task 0
-        return primes.get(0) > 0;
+        return primes.get(primes.size()-1) > 0;
     }
 
-    //Finds the next prime number ans add it to the beginning of primes list, returns former first to user.
+    //Finds the next prime number and adds it to the  primes list, returns former last to the user.
     public Integer next() {
         // task 0
-        int next = primes.get(0);          //Save prime number to return to user.
+        int next = primes.get(primes.size() - 1);
         int number = next + 1;
-        int p = 2;
-        boolean isPrime;
-        boolean found = false;
-        while (!found) {                           //Loop throw all numbers bigger than next until one is prime.
-            isPrime = true;
-            if (p > 46340) {                    //prevents infinite loop on large numbers.
-                while (p < number) {
-                    if (number % p == 0) {
-                        isPrime = false;
-                        number++;
-                        p = 2;
-                    } else {
-                        p++;
-                    }
-                }
-            } else {                        //Efficient loop for smaller numbers.
-                while (p * p <= number) {
-                    if (number % p == 0) {
-                        isPrime = false;
-                        number++;
-                        p = 2;
-                    } else {
-                        p++;
-                    }
-                }
+        int i = 0;
+        //Iterate through all primes in the primes list if non of them divides number than number is prime.
+        while (i < primes.size()) {
+            if (number % primes.get(i) == 0) {
+                number++;
+                i = 0;
+            }else{
+                i++;
             }
-            if (isPrime) found = true;
         }
-        ((LinkedList<Integer>) primes).addFirst(number);
+        primes.add(number);
         return next;
     }
 }

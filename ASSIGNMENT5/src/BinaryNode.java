@@ -1,6 +1,6 @@
 /*---------------------------------------
- Genuine author: <name>, I.D.: <id number>
- Date: xx-xx-2020 
+ Genuine author: Tom Lipshits, I.D.: 316005370
+ Date: 29-12-2020
 ---------------------------------------*/
 public class BinaryNode<T> {
 
@@ -103,16 +103,16 @@ public class BinaryNode<T> {
     //creates a String in requested format
     public String toString() {
         // task4
-        String ans = toString(height(),height());
+        String ans = toString(0);
         return ans;
     }
 
     //Assist function, creates a String in requested format with input of node height.
-    public String toString(int height,int depth){
+    public String toString(int depth){
         String ans = "";
-        int d = (height-depth);      //Calculating the depth of the node from the top.
+        int d = depth;      //Calculating the depth of the node from the top.
         if (left!=null){                //Creating left tree String.
-            ans = left.toString(height, depth-1) ;
+            ans = left.toString(depth+1) ;
         }
 
         //Adding node data to the string with the right amount of spaces.
@@ -124,42 +124,8 @@ public class BinaryNode<T> {
         ans = ans + mySpaces + data +"\n";
 
         if (right!=null){                  //Creating right tree String.
-            ans = ans + right.toString(height, depth-1);
+            ans = ans + right.toString(depth+1);
         }
         return ans;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

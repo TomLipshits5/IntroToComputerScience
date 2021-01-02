@@ -1,6 +1,6 @@
 /*---------------------------------------
- Genuine author: <name>, I.D.: <id number>
- Date: xx-xx-2020 
+Genuine author: Tom Lipshits, I.D.: 316005370
+ Date: 29-12-2020
 ---------------------------------------*/
 
 import java.util.Comparator;
