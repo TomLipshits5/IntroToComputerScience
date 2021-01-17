@@ -1,9 +1,161 @@
 public class Recorsive {
     public static void main(String[] args) {
-        String num = "010";
-        int[] weghit =   {3, 17, 26, 7, 9, 21, 6, 12, 13, 19, 8, 38};
-        binarysubset(weghit,165,0);
+        int[] arr = {1,2,5};
+
+        System.out.println(distanceMemo("amit","tom"));
+
+
     }
+
+    public static int distanceMemo(String source, String target){
+        int[][] memo = new int[source.length()+1][target.length()+1];
+        for (int i =0; i<memo.length;i++){
+            for (int j = 0; j<=target.length();j++){
+                memo[i][j] =-1;
+            }
+        }
+        return distanceMemo(source,target,memo);
+    }
+
+    public static int distanceMemo(String source,String target,int[][] memo){
+        if (source.length()==0){
+            return target.length();
+        }
+        if (target.length()== 0){
+            return source.length();
+        }
+        if(memo[source.length()][target.length()] ==-1){
+            if (source.charAt(0)== target.charAt(0)){
+                memo[source.length()][target.length()] = distanceMemo(source.substring(1),target.substring(1),memo);
+                return memo[source.length()][target.length()];
+            }
+            else{
+                int d1 = distanceMemo(source.substring(1),target.substring(1));
+                int d2 = distanceMemo(source.substring(1),target,memo);
+                int d3 = distanceMemo(source,target.substring(1),memo);
+                memo[source.length()][target.length()] =1+ Math.min(d1,Math.min(d2,d3));
+                return memo[source.length()][target.length()];
+            }
+        }
+        return memo[source.length()][target.length()];
+    }
+
+
+
+    public static int editDistance(String s1, String s2){
+        if (s1.equals("")){
+            return s2.length();
+        }
+        else if (s2.equals("")){
+            return s1.length();
+        }
+        else{
+            if (s1.charAt(0)==s2.charAt(0)){
+                return editDistance(s1.substring(1),s2.substring(1));
+            }else{
+                int d1 = 1+ editDistance(s1.substring(1),s2.substring(1));
+                int d2 = 1+ editDistance(s1.substring(1),s2);
+                int d3 = 1+ editDistance(s1,s2.substring(1));
+                return Math.min(d3,Math.min(d1,d2));
+            }
+        }
+    }
+
+
+    public static int change(int[] arr, int sum){
+
+        return change(arr,sum,0);
+    }
+
+    public static int change(int[] arr, int sum, int index){
+
+        if(sum ==0){
+            return 1;
+        }
+        if (sum<0 || index>= arr.length){
+            return 0;
+        }
+        else {
+            return change(arr, sum - arr[index], index) +
+                    change(arr, sum, index + 1);
+        }
+    }
+
+    public static int changeMemo(int[] arr,int sum){
+        int[][] memo = new int[sum+1][arr.length];
+        for (int i =0;i<memo.length;i++){
+            for (int j=0;j<arr.length;j++){
+                memo[i][j] = -1;
+            }
+        }
+        return changeMemo(arr,sum,0,memo);
+    }
+
+    public static int changeMemo(int[] arr, int sum,int i, int[][] memo){
+        if (sum==0){
+            return 1;
+        }
+        if (sum<0 || i>=arr.length){
+            return 0;
+        }
+        if (memo[sum][i]==-1){
+            memo[sum][i] = changeMemo(arr,sum-arr[i],i,memo) +
+                            changeMemo(arr,sum,i+1,memo);
+        }
+        return memo[sum][i];
+    }
+
+
+
+
+
+
+
+
+    public static int frog(int n){
+        return frog(n,n);
+    }
+
+    public static int frog(int n,int m){
+
+        if (n==1 && m==1){
+            return 1;
+        }
+        if (n<1 || m<1){
+            return 0;
+        }
+        else {
+            return frog(n-1,m)+frog(n,m-1)+frog(n-2,m)+frog(n,m-2);
+        }
+
+    }
+
+    public static int frogMemo(int n){
+        int[][] memo = new int[n+1][n+1];
+        for (int i =0;i<memo.length;i++){
+            for (int j=0;j<memo.length;j++){
+                memo[i][j] = -1;
+            }
+        }
+        return frogMemo(n,n,memo);
+    }
+    public static int frogMemo(int n,int m ,int[][] memo){
+        if(n==1&& m==1){
+            return 1;
+        }
+        if(n<1||m<1){
+            return 0;
+        }
+        if(memo[n][m]==-1){
+            memo[n][m]= frogMemo(n-1,m,memo)+
+                        frogMemo(n-2,m,memo)+
+                        frogMemo(n,m-1,memo)+
+                        frogMemo(n,m-2,memo);
+            memo[m][n] = memo[n][m];
+        }
+        return memo[n][m];
+    }
+
 
     public static boolean isPalindrome(char[] a, int from, int to) {
         boolean isPalindrome = false;

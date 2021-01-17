@@ -1,8 +1,8 @@
 package com;
 public class Link<E> {
     //Fields:
-    private E data;
-    private Link<E> next;
+    public E data;
+    public Link<E> next;
 
 
 

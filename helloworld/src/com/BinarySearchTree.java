@@ -60,7 +60,25 @@ public class BinarySearchTree<T> extends BinaryTree<T> {
     public Comparator<T> getComparator(){
         return treeComperator;
     }
+    public Iterator<T> pathIterator(T findMe){
+        if(!contains(findMe)){
+            throw new IllegalArgumentException("tree doesnt contain " + findMe.toString());
+        }
+        return new BSTPathIterator<T>((BinarySearchNode<T>) root,findMe);
+    }
 
-
+//    public void insert(Object element) {
+//        if (!(element instanceof Character)) {
+//            throw new IllegalArgumentException();
+//        }
+//        if ((Character) element > 'Z' || (Character) element < 'A') {
+//            throw new IllegalArgumentException();
+//        }
+//        if (root ==null){
+//            root = new BinarySearchNode((T)element,treeComperator);
+//        }
+//        root.insert((T) element);
+//
+//    }
 
 }

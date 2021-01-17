@@ -2,6 +2,12 @@
  Genuine author: Tom Lipshits, I.D.: 316005370
  Date: 29-12-2020
 ---------------------------------------*/
+/**
+ * This class represents a bank management system,
+ * it has two data data structures that store and organize accounts by name and by account number..
+ *
+ * @author Tom Lipshits.
+ */
 public class Bank {
 
 	private BankAccountsBinarySearchTree namesTree;
@@ -85,5 +91,5 @@ public class Bank {
 		}
 		return isValidTransaction;				//Returns whether the transaction was committed.
 	}
-	
+
 }

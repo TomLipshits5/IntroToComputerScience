@@ -1,6 +1,5 @@
 package com;
 import java.util.NoSuchElementException;
-import Interfaces.*;
 
 public class LinkedListIterator<T> implements Iterator<T> {
 

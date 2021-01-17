@@ -1,5 +1,4 @@
 package com;
-import Interfaces.*;
 import java.util.NoSuchElementException;
 
 public class PrimesIterator implements Iterator<Integer>{

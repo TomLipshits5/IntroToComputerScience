@@ -30,6 +30,9 @@ public class BinarySearchNode<T> extends BinaryNode<T> {
         }
     }
 
+    public Comparator<T> getComparator(){
+        return treeComparator;
+    }
     public T findMin(){
         BinaryNode<T> currentNode = this;
         while(currentNode.left!=null){
@@ -77,6 +80,26 @@ public class BinarySearchNode<T> extends BinaryNode<T> {
         }
 
     }
+
+//    public void insert(T element){
+//        int signum = treeComparator.compare(data,element);
+//        if (signum>0){
+//            if (left == null){
+//                left = new BinarySearchNode(element,treeComparator);
+//            }
+//            else{
+//                left.insert(element);
+//            }
+//        }
+//        if(signum<0){
+//            if (right == null){
+//                right = new BinarySearchNode(element,treeComparator);
+//            }
+//            else {
+//                right.insert(element);
+//            }
+//        }
+//    }
 
     public boolean equals(Object other){
         return true;

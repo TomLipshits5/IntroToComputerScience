@@ -177,7 +177,7 @@ public class LinkedList<T> implements List<T> {
         for (Link<T> current = first; current != null; current = current.getNext()) {
             s = s + current.getData() + ", ";
         }
-        s = s + "]";
+        s = s.substring(0,s.length()-2) + "]";
         return s;
     }
 

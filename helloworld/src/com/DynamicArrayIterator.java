@@ -1,6 +1,5 @@
 package com;
 import java.util.NoSuchElementException;
-import Interfaces.*;
 
 public class DynamicArrayIterator<T> implements Iterator<T> {
     //Fields:
