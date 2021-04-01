@@ -1,50 +1,30 @@
 package com;
+
+import Graphs.*;
 import Interfaces.*;
 
+
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
+        Graph gr = new GraphAsAdjacencyMatrix(4);
+        gr.addEdge(1,0);
+        gr.addEdge(1,3);
+        gr.addEdge(2,0);
+        gr.addEdge(1,3);
+        gr.addEdge(2,3);
+//        gr.addEdge(2,0);
+//        gr.addEdge(3,0);
 
-        DynamicArray ls = new DynamicArray<>();
-        ls.add(1);
-
-
-        System.out.println(postFix("67+5*4+3*2+1*"));
-
-
-
+        GraphAlgorithm con = new FindPathAlgorithm(gr,0,3);
+//        Graph connecting = (Graph)con.runAlgorithm();
+//        System.out.println(gr);
+//        System.out.println(connecting);
+        System.out.println((List<Integer>)con.runAlgorithm());
 
 
     }
 
 
-    public static int postFix(String s){
-        int tmp =0;
-        Stack<Integer> myStack= new StackAsLinkedList<>();
-        for(int i = 0 ; i<s.length(); i++){
-            Character c = s.charAt(i);
-            if (c>='0' && c<='9'){
-                myStack.push(c-'0');
-            }else{
-                int num1 = myStack.pop();
-                int num2 = myStack.pop();
-                if (c == '+'){
-                    tmp = num1 + num2;
-                }
-                if (c == '*'){
-                    tmp = num1 * num2;
-                }
-                if (c == '-'){
-                    tmp = num1 - num2;
-                }
-                if (c == '/'){
-                    tmp = num1 / num2;
-                }
-                myStack.push(tmp);
-            }
-
-        }
-        return myStack.pop();
-    }
 }
 
 

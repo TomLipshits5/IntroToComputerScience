@@ -2,8 +2,6 @@
 package com;
 import Interfaces.*;
 
-import java.util.NoSuchElementException;
-
 
 public class DynamicArray<T> implements List<T> {
     //Fields

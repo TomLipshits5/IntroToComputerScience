@@ -11,4 +11,16 @@ public class Edge {
         this.right = right;
 
     }
+
+    public int getLeft() {
+        return left;
+    }
+
+    public int getRight() {
+        return right;
+    }
+
+    public String toString(){
+        return "(" + left+","+right+")";
+    }
 }
