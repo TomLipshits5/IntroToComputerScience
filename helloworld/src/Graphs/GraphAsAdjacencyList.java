@@ -13,7 +13,7 @@ public class GraphAsAdjacencyList extends AbstractGraph{
         super(nVertices);
         adj = new DynamicArray<List<Integer>>();
         for (int i =0 ; i<nVertices; i++){
-            adj.add(0,new DynamicArray<Integer>());
+            adj.add(new DynamicArray<Integer>());
         }
 
     }
@@ -40,6 +40,7 @@ public class GraphAsAdjacencyList extends AbstractGraph{
             adj.get(e.left).remove(e.right);
         }
     }
+
 
     private Edge toEdge(int i , int j){
         Edge edge = new Edge(Math.min(i,j),Math.max(i,j));

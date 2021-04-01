@@ -17,7 +17,7 @@ public class ConectivityAlgorithm extends GraphAlgorithm {
 //        dfsVisit(0,visited);
         return reachAll(visited);
     }
-
+//
 //    private void dfsVisit(int i,boolean[] visited){
 //        visited[i] = true;
 //        for (Integer j : input.neighborsOf(i)) {

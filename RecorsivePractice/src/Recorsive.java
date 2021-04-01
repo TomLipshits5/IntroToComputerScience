@@ -1,11 +1,45 @@
+import java.util.Arrays;
+
 public class Recorsive {
     public static void main(String[] args) {
-        int[] arr = {1,2,5};
+        int[] arr = {1,5};
 
-        System.out.println(distanceMemo("amit","tom"));
+        System.out.println(frogMemoKStep(30));
 
 
     }
+
+
+    public static int frogMemoKStep(int k){
+        int[][][] memo = new int[k+1][2][2];
+        for (int i = 0; i<k+1;i++){
+            for (int j = 0; j<2;j++){
+                for(int l = 0;l<2;l++){
+                    memo[i][j][l] = -1;
+
+                }
+            }
+        }
+
+        return frogMemoKStep(k,0,0,memo);
+    }
+
+    public static int frogMemoKStep(int k,int x,int y,int[][][] memo){
+        if (x==1 & y==1 & k==0){
+            return 1;
+        }
+        if (k<=0 | x<0 | x>1 | y>1 | y<0 ){
+            return 0;
+        }
+        if (memo[k][x][y]==-1){
+            memo[k][x][y]= frogMemoKStep(k-1,x+1,y,memo) + frogMemoKStep(k-1,x-1,y,memo)+
+                            frogMemoKStep(k-1,x,y+1,memo) + frogMemoKStep(k-1,x,y-1,memo);
+        }
+        return memo[k][x][y];
+    }
+
+
+
 
     public static int distanceMemo(String source, String target){
         int[][] memo = new int[source.length()+1][target.length()+1];
@@ -110,8 +144,6 @@ public class Recorsive {
 
 
 
-
-
     public static int frog(int n){
         return frog(n,n);
     }
@@ -129,6 +161,32 @@ public class Recorsive {
         }
 
     }
+
+    public static int frogMemoOneStep(int n){
+        int[][] memo = new int[n+1][n+1];
+        for (int i =0 ; i<n+1;i++){
+            for (int j=0;j<n+1;j++){
+                memo[i][j] = -1;
+            }
+        }
+        return frogMemoOneStep(n,n,memo);
+    }
+
+    public static int frogMemoOneStep(int n,int m,int[][] memo){
+        if (n==1&m==1){
+            return 1;
+        }
+        if (n<1|m<1){
+            return 0;
+        }
+        if (memo[n][m]==-1){
+            memo[n][m]= frogMemoOneStep(n-1,m,memo)+frogMemoOneStep(n,m-1,memo);
+        }
+        return memo[n][m];
+    }
+
+
+
 
     public static int frogMemo(int n){
         int[][] memo = new int[n+1][n+1];

@@ -23,6 +23,6 @@ public class IntConstantOperator implements StackOperator {
 
     @Override
     public void applyString(Stack<String> st) {
-
+        st.push(toString());
     }
 }

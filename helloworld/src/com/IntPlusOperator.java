@@ -15,6 +15,6 @@ public class IntPlusOperator implements StackOperator {
 
     @Override
     public void applyString(Stack<String> st) {
-
+        st.push("("+ st.pop() + "+" + st.pop() +")");
     }
 }

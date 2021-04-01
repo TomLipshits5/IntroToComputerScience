@@ -115,7 +115,7 @@ public class BinaryNode<T> {
          if (right != null){
              rightS = right.size();
          }
-         return leftS+rightS +1;
+         return leftS + rightS + 1;
     }
 
 
@@ -123,8 +123,8 @@ public class BinaryNode<T> {
          if (!(other instanceof BinaryNode)){
              return false;
          }
-         BinaryNode otherNode = ((BinaryNode)other);
-         boolean isEquals = false;
+         BinaryNode<T> otherNode = (BinaryNode<T>)other;
+         boolean isEquals;
 
          isEquals = (data.equals(otherNode.data)) && ((left == null &&
                  otherNode.left == null) || (left != null && left.equals(otherNode.left))) &&
@@ -192,37 +192,6 @@ public class BinaryNode<T> {
 
     }
 
-    public boolean isEven(){
-        boolean ans ;
-        boolean isLeft = true;
-        boolean isRight = true;
-        if (left!=null){
-            isLeft = left.isEven();
-
-        }
-        if (right!=null){
-            isRight = right.isEven();
-
-        }
-        ans = !(isLeft == isRight);
-        return ans;
-
-
-    }
-
-    public Integer evaluate(){
-         Integer ans;
-         if(data == "*"){
-             ans=left.evaluate() * right.evaluate();
-         }
-         else if (data == "+"){
-             ans = left.evaluate()+ right.evaluate();
-         }
-         else{
-             ans= Integer.parseInt((String)data);
-         }
-         return ans;
-    }
 
 //    public String toString(){
 //         String ans = "(";
@@ -236,31 +205,6 @@ public class BinaryNode<T> {
 //         return ans+")";
 //    }
 
-    public int numberOfLeaves(){
-         int ans = 0;
-         if (left !=null){
-             ans = ans+ left.numberOfLeaves();
-         }
-         if (right!=null){
-             ans = ans+right.numberOfLeaves();
-         }
-         if (left==null&right==null){
-             ans = 1;
-         }
-         return ans;
-    }
-
-    public void listOfLeaves(List<T> list){
-         if (left == null && right == null){
-             list.add(data);
-         }
-         if (left!=null){
-             left.listOfLeaves(list);
-         }
-         if (right!=null){
-             right.listOfLeaves(list);
-         }
-    }
 
 
     public boolean isFullLevel(int i){
@@ -271,8 +215,8 @@ public class BinaryNode<T> {
              return true;
          }
          if (i==1){
-             leftIs=left!=null;
-             rightIs=right!=null;
+             leftIs = left!=null;
+             rightIs = right!=null;
          }
          if(right!=null && i>1){
              rightIs = right.isFullLevel(i-1);
@@ -349,6 +293,66 @@ public class BinaryNode<T> {
         return found;
     }
 
+    public boolean isEven(){
+         boolean isLeft = true, isRight = true;
+         if (left!=null){
+             isLeft = left.isEven();
+         }
+         if (right!=null){
+             isRight = right.isEven();
+         }
+         return !(isLeft&&isRight);
+    }
+
+    public Integer evaluate(){
+         if (left==null){
+             if (data instanceof Integer){
+                 return (Integer)data;
+             }else{
+                 return Integer.parseInt((String)data);
+             }
+         }
+         else{
+             if (data == "+"){
+                 return left.evaluate() + right.evaluate();
+             }else{
+                 return left.evaluate() * right.evaluate();
+             }
+         }
+    }
+
+
+    public int numberOfLeaves(){
+         int leftLeaves = 0, rightLeaves = 0;
+         if (left == null && right == null){
+             return 1;
+         }
+         if (left!=null){
+             leftLeaves = left.numberOfLeaves();
+         }
+         if (right!=null){
+             rightLeaves = right.numberOfLeaves();
+         }
+         return rightLeaves+leftLeaves;
+
+    }
+
+    public void listOfLeaves(List<T> leaves){
+         if (left == null && right == null){
+             leaves.add(data);
+         }
+         if (left!=null){
+             left.listOfLeaves(leaves);
+         }
+         if (right!=null){
+             right.listOfLeaves(leaves);
+         }
+    }
+
+
+
+
+//{1,2,"+",3,"*"}
 
     public static BinaryNode<Object> buildTree(Object[] experetion){
         Stack<BinaryNode<Object>> stack = new StackAsLinkedList<>();
@@ -365,6 +369,10 @@ public class BinaryNode<T> {
          return stack.pop();
 
     }
+
+
+
+
 
 
 

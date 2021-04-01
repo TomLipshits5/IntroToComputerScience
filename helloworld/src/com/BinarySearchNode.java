@@ -18,14 +18,14 @@ public class BinarySearchNode<T> extends BinaryNode<T> {
                 left.insert(element);
             }
             else {
-                left = new BinarySearchNode(element,treeComparator);
+                left = new BinarySearchNode<T>(element,treeComparator);
             }
         }else if(treeComparator.compare(element,data)>0){
             if(right!= null){
                 right.insert(element);
             }
             else{
-                right = new BinarySearchNode(element, treeComparator);
+                right = new BinarySearchNode<T>(element, treeComparator);
             }
         }
     }
@@ -101,9 +101,7 @@ public class BinarySearchNode<T> extends BinaryNode<T> {
 //        }
 //    }
 
-    public boolean equals(Object other){
-        return true;
-    }
+
 
 
 }

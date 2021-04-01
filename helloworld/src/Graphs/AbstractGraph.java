@@ -20,11 +20,11 @@ public abstract class AbstractGraph implements Graph{
     //Methods:
     public int numberOfVertices() {
         return nVertices;
-    }// HW
+    }
 
     public int numberOfEdges() {
         return edgeSet().size();
-    } // HW
+    }
 
     public int degree(int v) {
         if (!rangeCheck(v)){
@@ -34,8 +34,14 @@ public abstract class AbstractGraph implements Graph{
     }
 
     public Set<Integer> neighborsOf(int v) {
-        return null;
-    } // HW
+        Set<Integer> neighbors = new SetAsLinkedList<>();
+        for(int i = 0; i<nVertices;i++){
+            if (containsEdge(v,i)){
+                neighbors.add(i);
+            }
+        }
+        return neighbors;
+    }
 
     public Set<Edge> edgeSet() {
         Set<Edge> edgeSet = new SetAsLinkedList<>();
@@ -54,10 +60,15 @@ public abstract class AbstractGraph implements Graph{
      * @return true if v is in vertices.
      */
     public boolean rangeCheck(int v){
-        if (v<0 || v>nVertices){
+        if (v<0 || v>=nVertices){
             return false;
         }
         return true;
+    }
+
+    @Override
+    public String toString() {
+        return edgeSet().toString();
     }
 
     //Abstract methods:

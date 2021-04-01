@@ -61,8 +61,8 @@ public class BinarySearchTree<T> extends BinaryTree<T> {
         return treeComperator;
     }
     public Iterator<T> pathIterator(T findMe){
-        if(!contains(findMe)){
-            throw new IllegalArgumentException("tree doesnt contain " + findMe.toString());
+        if (findMe == null){
+            throw new IllegalArgumentException();
         }
         return new BSTPathIterator<T>((BinarySearchNode<T>) root,findMe);
     }

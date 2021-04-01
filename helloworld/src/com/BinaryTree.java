@@ -111,22 +111,6 @@ public class BinaryTree<T> implements Iterable<T> {
         }
     }
 
-    public boolean isEven(){
-        if (isEmpty()){
-            return true;
-        }
-        boolean isEven;
-        isEven = root.isEven();
-        return isEven;
-    }
-
-    public Integer evaluate(){
-        if (isEmpty()){
-            throw new IllegalArgumentException();
-        }
-        return root.evaluate();
-    }
-
     public String toString(){
         String ans = "";
         if(!isEmpty()){
@@ -135,21 +119,6 @@ public class BinaryTree<T> implements Iterable<T> {
         return ans;
     }
 
-    public int numberOfLeaves(){
-        if (isEmpty()){
-            return 0;
-        }
-        return root.numberOfLeaves();
-    }
-
-    public List<T> listOfLeaves(){
-        if (isEmpty()){
-            return new LinkedList<T>();
-        }
-        List<T> list = new LinkedList<T>();
-        root.listOfLeaves(list);
-        return list;
-    }
 
     public boolean isFullLevel(int i){
         if (isEmpty()){
@@ -194,6 +163,23 @@ public class BinaryTree<T> implements Iterable<T> {
     }
 
 
+    public boolean isEven(){
+        if (root == null){
+            return true;
+        }
+        else{
+            return root.isEven();
+        }
+    }
+
+    public Integer evaluate(){
+        if (isEmpty()){
+            throw new IllegalArgumentException("the tree is empty");
+        }
+        return root.evaluate();
+    }
+
+
 
 //    public boolean contains(Object element){
 //        if(element == null){
@@ -220,6 +206,24 @@ public class BinaryTree<T> implements Iterable<T> {
 //        }
 //        return true;
 //    }
+
+    public int numberOfLeaves(){
+        if (isEmpty()){
+            return 0;
+        }
+        return root.numberOfLeaves();
+    }
+
+    public List<T> listOfLeaves(){
+        List<T> leaves = new DynamicArray<>();
+        if (isEmpty()){
+            return leaves;
+        }
+        else{
+            root.listOfLeaves(leaves);
+        }
+        return leaves;
+    }
 
 
 
