@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1a07b1ea-f24c-41a2-9c17-abb25ca1089e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Practice/Midterm1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Practice/Midterm1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Practice/Midterm2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Practice/Midterm2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Practice/Midterm3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Practice/Midterm3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RecorsivePractice/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RecorsivePractice/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RecorsivePractice/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RecorsivePractice/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RecorsivePractice/RecorsivePractice.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RecorsivePractice/out/production/RecorsivePractice/Recorsive.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RecorsivePractice/src/Recorsive.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../helloworld/out/production/helloworld/Record.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../helloworld/out/production/helloworld/Strings.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../helloworld/src/Record.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../helloworld/src/Strings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ASSIGNMENT2/Assignment2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ASSIGNMENT2/Assignment2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ASSIGNMENT2/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ASSIGNMENT2/test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assignment2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/Math.class" beforeDir="false" afterPath="$PROJECT_DIR$/../helloworld/out/production/helloworld/Math.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/targilon2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/src/Math.java" beforeDir="false" afterPath="$PROJECT_DIR$/../helloworld/src/Math.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/src/targilon2.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1k3uFfTspVXtSIea7e2409LDZi6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager" selected="Application.Assignment2">
+    <configuration name="Assignment2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Assignment2" />
+      <module name="ASSIGNMENT2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test" />
+      <module name="ASSIGNMENT2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Assignment2" />
+        <item itemvalue="Application.test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1a07b1ea-f24c-41a2-9c17-abb25ca1089e" name="Default Changelist" comment="" />
+      <created>1604941494902</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604941494902</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1606637577122">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606637577122" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1606637578965">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606637578965" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1606637578965">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606637578965" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1606637578965">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606637578965" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1606637578965">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606637578965" />
+  </component>
+</project>

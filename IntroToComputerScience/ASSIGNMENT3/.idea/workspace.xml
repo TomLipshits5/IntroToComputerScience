@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6b380643-308b-421f-8514-940b10940cb6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Practice/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Practice/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Practice/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Practice/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Practice/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Practice/Practice.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../helloworld/src/Graphs/ConectivityAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../helloworld/src/Graphs/EveDegreeAlgothem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../helloworld/src/Graphs/GraphAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../helloworld/src/Interfaces/MultiSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../helloworld/src/Interfaces/StackOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../helloworld/src/com/BSTPathIterator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../helloworld/src/com/BinaryTreePostOrderIterator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../helloworld/src/com/BinaryTreePreOrderIterator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../helloworld/src/com/CharacterComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../helloworld/src/com/Course.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../helloworld/src/com/DivisibilityFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../helloworld/src/com/DynamicStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../helloworld/src/com/FilterdList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../helloworld/src/com/IntConstantOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../helloworld/src/com/IntMultOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../helloworld/src/com/IntPlusOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../helloworld/src/com/MejorityFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../helloworld/src/com/MergeIterator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../helloworld/src/com/MultiSetAsList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../helloworld/src/com/MultiSetPair.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../helloworld/src/com/Name.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../helloworld/src/com/SmartLink.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../helloworld/src/com/StringScanner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../helloworld/src/com/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../helloworld/src/com/StudentsComparatorByAvarage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ASSIGNMENT5/src/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ASSIGNMENT5/src/Bank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/BinaryNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/BinarySearchNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/BinarySearchTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/BinaryTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/BinaryTreeBFSIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/BinaryTreeInOrderIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/Circle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/CircularQueue$Link.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/CircularQueue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/Comparator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/ContactPerson.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/DoesNotDivideFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/DynamicArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/Filter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/IntegerComparator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/IntegerIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/LargeInt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/LinkedList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/Logic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/MultiFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/MyMath.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/PhoneNumber.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/PrimesIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/PrimesIterator2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/Queue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/QueueAsLinkedList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/Record.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/Rectangle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/Shape.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/SmallTwinPrimesIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/Sorting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/Square.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/Stack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/StackAsLinkedList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/out/production/helloworld/Strings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/src/Graphs/AbstractGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/../helloworld/src/Graphs/AbstractGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/src/Graphs/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/../helloworld/src/Graphs/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/src/Graphs/GraphAsAdjacencyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../helloworld/src/Graphs/GraphAsAdjacencyList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/src/Graphs/GraphAsAdjacencyMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/../helloworld/src/Graphs/GraphAsAdjacencyMatrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/src/Interfaces/Iterable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../helloworld/src/Interfaces/Iterable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/src/Interfaces/Iterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../helloworld/src/com/Iterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/src/Interfaces/Set.java" beforeDir="false" afterPath="$PROJECT_DIR$/../helloworld/src/Interfaces/Set.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/src/com/BinaryNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../helloworld/src/com/BinaryNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/src/com/BinarySearchNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../helloworld/src/com/BinarySearchNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/src/com/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/../helloworld/src/com/BinarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/src/com/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/../helloworld/src/com/BinaryTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/src/com/BinaryTreeInOrderIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../helloworld/src/com/BinaryTreeInOrderIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/src/com/DynamicArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/../helloworld/src/com/DynamicArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/src/com/DynamicArrayIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../helloworld/src/com/DynamicArrayIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/src/com/Link.java" beforeDir="false" afterPath="$PROJECT_DIR$/../helloworld/src/com/Link.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/src/com/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../helloworld/src/com/LinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/src/com/LinkedListIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../helloworld/src/com/LinkedListIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/src/com/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../helloworld/src/com/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helloworld/src/com/PrimesIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../helloworld/src/com/PrimesIterator.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1lEKJhB4yDM59HSNIx5NO32T4Xi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="ASSIGNMENT3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Part1_Change" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Part1_Change" />
+      <module name="ASSIGNMENT3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Part2_Change" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Part2_Change" />
+      <module name="ASSIGNMENT3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <module name="ASSIGNMENT3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.Part1_Change" />
+        <item itemvalue="Application.Part2_Change" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6b380643-308b-421f-8514-940b10940cb6" name="Default Changelist" comment="" />
+      <created>1607156752274</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607156752274</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1608051514367">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1608051514367" />
+    <state width="1877" height="179" key="GridCell.Tab.0.bottom" timestamp="1608895769103">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="179" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608895769103" />
+    <state width="1877" height="179" key="GridCell.Tab.0.center" timestamp="1608895769103">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="179" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608895769103" />
+    <state width="1877" height="179" key="GridCell.Tab.0.left" timestamp="1608895769103">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="179" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608895769103" />
+    <state width="1877" height="179" key="GridCell.Tab.0.right" timestamp="1608895769103">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="179" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608895769103" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1607453782522">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607453782522" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1607453782522">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607453782522" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1607453782522">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607453782522" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1607453782522">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607453782522" />
+    <state x="470" y="256" width="979" height="629" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1607165805164">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="470" y="256" width="979" height="629" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040@0.0.1920.1040" timestamp="1607165805164" />
+    <state x="551" y="140" key="new project wizard" timestamp="1608051551141">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="551" y="140" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1608051551141" />
+    <state x="623" y="225" key="search.everywhere.popup" timestamp="1607282534930">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607282534930" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="37" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

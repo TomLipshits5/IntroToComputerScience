@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0cd2e38c-7fcb-4c00-b88a-f0c128578513" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Graphs/BreadthFirstAlgorithem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Graphs/ConectivityAlgorithem2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Graphs/ConnectingGraph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Graphs/FindPathAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Graphs/HasPathAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Graphs/IsCycleGraphAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Graphs/TwoDegreeAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test_2017_C/IsHemiltoncycleAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test_2017_C/IsValidPathAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test_2017_C/Q4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test_2017_C/Test_2017_C.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test_2018_B/BreathFirstAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test_2018_B/ConnectivityAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test_2018_B/LargeInteger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test_2018_B/MergeIterator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test_2018_B/Test_2018_B.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test_2019_A/IsCyclicGraphAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test_2019_A/Test_Ans.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test_2019_A/TwoDegreesAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test_2019_B/BinaryNumberComperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test_2019_B/DoesNotDivideFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test_2019_B/MultiFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test_2019_B/PrimesIterator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test_2019_B/Test_2019_B.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test_2020_A/BSTPathIterator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test_2020_A/BiDirectionalLink.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test_2020_A/BiDirectionalLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test_2020_A/Test_2020_A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RecorsivePractice/out/production/RecorsivePractice/Recorsive.class" beforeDir="false" afterPath="$PROJECT_DIR$/../RecorsivePractice/out/production/RecorsivePractice/Recorsive.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RecorsivePractice/src/Recorsive.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RecorsivePractice/src/Recorsive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/helloworld/Graphs/AbstractGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/helloworld/Graphs/AbstractGraph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/helloworld/Graphs/Edge.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/helloworld/Graphs/Edge.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/helloworld/Graphs/GraphAsAdjacencyList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/helloworld/Graphs/GraphAsAdjacencyList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/helloworld/com/BinaryNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/helloworld/com/BinaryNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/helloworld/com/BinarySearchNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/helloworld/com/BinarySearchNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/helloworld/com/BinarySearchTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/helloworld/com/BinarySearchTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/helloworld/com/BinaryTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/helloworld/com/BinaryTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/helloworld/com/ExpressionAsBinaryTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/helloworld/com/ExpressionAsBinaryTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/helloworld/com/IntConstantOperator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/helloworld/com/IntConstantOperator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/helloworld/com/IntMultOperator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/helloworld/com/IntMultOperator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/helloworld/com/IntPlusOperator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/helloworld/com/IntPlusOperator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/helloworld/com/Link.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/helloworld/com/Link.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/helloworld/com/LinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/helloworld/com/LinkedList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/helloworld/com/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/helloworld/com/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/helloworld/com/MyMath.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphs/AbstractGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphs/AbstractGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphs/ConectivityAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphs/ConectivityAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphs/Edge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphs/Edge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphs/GraphAsAdjacencyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphs/GraphAsAdjacencyList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/BinaryNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BinaryNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/BinarySearchNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BinarySearchNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BinarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BinaryTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ExpressionAsBinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ExpressionAsBinaryTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/IntConstantOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/IntConstantOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/IntMultOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/IntMultOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/IntPlusOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/IntPlusOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Link.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Link.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/LinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/MyMath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/RandomAlgorithems.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="ProjectId" id="1jhNzRToUecZB0igZjEHZYNFt7b" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../RecorsivePractice" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Main" />
+      <module name="helloworld" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test_2018_B" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test_2018_B.Test_2018_B" />
+      <module name="helloworld" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test_2018_B.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test_2019_B" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test_2019_B.Test_2019_B" />
+      <module name="helloworld" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test_2019_B.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test_2020_A" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test_2020_A.Test_2020_A" />
+      <module name="helloworld" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test_2020_A.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test_Ans" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test_2019_A.Test_Ans" />
+      <module name="helloworld" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test_2019_A.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Test_2019_B" />
+        <item itemvalue="Application.Test_2020_A" />
+        <item itemvalue="Application.Test_2018_B" />
+        <item itemvalue="Application.Test_Ans" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0cd2e38c-7fcb-4c00-b88a-f0c128578513" name="Default Changelist" comment="" />
+      <created>1604252636234</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604252636234</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
