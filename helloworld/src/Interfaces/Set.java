@@ -1,5 +1,5 @@
 package Interfaces;
-public interface Set<T> extends Iterable<T>{
+public interface Set<T> extends Iterable<T> {
 
     public int size();
 

@@ -1,11 +1,18 @@
 package com;
+
+import Interfaces.List;
+import Interfaces.Stack;
+
+import java.security.cert.CRLReason;
+
+
 public class BinaryNode<T> {
 
     //Fields:
 
     protected T data;
-    protected BinaryNode left;
-    protected  BinaryNode right;
+    protected BinaryNode<T> left;
+    protected  BinaryNode<T> right;
 
 
     //Constructors:
@@ -51,6 +58,27 @@ public class BinaryNode<T> {
          }
     }
 
+    public BinaryNode<T> remove(T element){
+         BinaryNode<T>outPut = this;
+         if (data.equals(element)){
+             if(left!=null){
+                 data = (T)left.getData();
+                 left = left.remove(data);
+             }else if (right!=null){
+                 data = (T)right.getData();
+                 right = right.remove(data);
+             }else{
+                 outPut = null;
+             }
+         }
+         if(left!=null && left.contains(element)){
+             left.remove(element);
+         }else if(right!=null){
+             right.remove(element);
+         }
+         return outPut;
+    }
+
 
 
     public boolean contains(T element){
@@ -87,7 +115,7 @@ public class BinaryNode<T> {
          if (right != null){
              rightS = right.size();
          }
-         return leftS+rightS +1;
+         return leftS + rightS + 1;
     }
 
 
@@ -95,8 +123,8 @@ public class BinaryNode<T> {
          if (!(other instanceof BinaryNode)){
              return false;
          }
-         BinaryNode otherNode = ((BinaryNode)other);
-         boolean isEquals = false;
+         BinaryNode<T> otherNode = (BinaryNode<T>)other;
+         boolean isEquals;
 
          isEquals = (data.equals(otherNode.data)) && ((left == null &&
                  otherNode.left == null) || (left != null && left.equals(otherNode.left))) &&
@@ -163,6 +191,190 @@ public class BinaryNode<T> {
          right = tmp;
 
     }
+
+
+//    public String toString(){
+//         String ans = "(";
+//         if (left!= null){
+//             ans = ans + left.toString()+",";
+//         }
+//         ans = ans + data.toString();
+//         if (right!=null){
+//             ans = ans +","+ right.toString();
+//         }
+//         return ans+")";
+//    }
+
+
+
+    public boolean isFullLevel(int i){
+         boolean ans = false;
+         boolean leftIs = false;
+         boolean rightIs = false;
+         if (i == 0){
+             return true;
+         }
+         if (i==1){
+             leftIs = left!=null;
+             rightIs = right!=null;
+         }
+         if(right!=null && i>1){
+             rightIs = right.isFullLevel(i-1);
+         }
+         if (left!=null && i>1){
+             leftIs = left.isFullLevel(i-1);
+         }
+         ans = leftIs&&rightIs;
+
+        return ans;
+    }
+
+    public boolean isFullTree(){
+         boolean ans = false;
+         if (right == null && left == null){
+             ans = true;
+         }
+         else if (right!=null && left!=null){
+             ans = left.isFullTree() && right.isFullTree();
+         }else{
+             ans = false;
+         }
+         return ans;
+    }
+
+    public String toString(){
+         String ans = toString("");
+         return ans;
+    }
+
+    private String toString(String spaces){
+         String ans = "";
+         if (left!=null){
+             ans = left.toString(spaces+" ");
+         }
+         ans = ans + spaces + data+"\n";
+         if (right!=null){
+             ans = ans+right.toString(spaces+" ");
+         }
+         return ans;
+    }
+
+
+    public boolean hasPath(int sum){
+         boolean ans = false;
+         sum = sum-(Integer)data;
+         if (left == null && right == null && sum ==0){
+             ans = true;
+         }
+         if (!ans&&left!=null && sum>0){
+             ans =left.hasPath(sum);
+         }
+         if (!ans&&right!=null && sum>0){
+             ans= right.hasPath(sum);
+         }
+         return ans;
+    }
+
+    public boolean printPath(int sum,String acc){
+         boolean found = false;
+        sum = sum-(Integer)data;
+        acc = acc+data.toString()+",";
+        if (left == null && right == null && sum ==0){
+            found =true;
+            System.out.println(acc.substring(0,acc.length()-1));
+
+        }
+        if (!found && left!=null && sum>0){
+            found = left.printPath(sum,acc);
+        }
+        if (!found && right!=null && sum>0){
+             found = right.printPath(sum,acc);
+        }
+        return found;
+    }
+
+    public boolean isEven(){
+         boolean isLeft = true, isRight = true;
+         if (left!=null){
+             isLeft = left.isEven();
+         }
+         if (right!=null){
+             isRight = right.isEven();
+         }
+         return !(isLeft&&isRight);
+    }
+
+    public Integer evaluate(){
+         if (left==null){
+             if (data instanceof Integer){
+                 return (Integer)data;
+             }else{
+                 return Integer.parseInt((String)data);
+             }
+         }
+         else{
+             if (data == "+"){
+                 return left.evaluate() + right.evaluate();
+             }else{
+                 return left.evaluate() * right.evaluate();
+             }
+         }
+    }
+
+
+    public int numberOfLeaves(){
+         int leftLeaves = 0, rightLeaves = 0;
+         if (left == null && right == null){
+             return 1;
+         }
+         if (left!=null){
+             leftLeaves = left.numberOfLeaves();
+         }
+         if (right!=null){
+             rightLeaves = right.numberOfLeaves();
+         }
+         return rightLeaves+leftLeaves;
+
+    }
+
+    public void listOfLeaves(List<T> leaves){
+         if (left == null && right == null){
+             leaves.add(data);
+         }
+         if (left!=null){
+             left.listOfLeaves(leaves);
+         }
+         if (right!=null){
+             right.listOfLeaves(leaves);
+         }
+    }
+
+
+
+
+//{1,2,"+",3,"*"}
+
+    public static BinaryNode<Object> buildTree(Object[] experetion){
+        Stack<BinaryNode<Object>> stack = new StackAsLinkedList<>();
+         for (Object i: experetion){
+             BinaryNode<Object> toHandle = new BinaryNode<>(i);
+             if (i instanceof Integer){
+                 stack.push(toHandle);
+             }else{
+                 toHandle.left = stack.pop();
+                 toHandle.right = stack.pop();
+                 stack.push(toHandle);
+             }
+         }
+         return stack.pop();
+
+    }
+
+
+
+
+
+
 
 
 

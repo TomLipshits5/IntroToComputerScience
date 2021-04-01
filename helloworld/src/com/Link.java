@@ -1,8 +1,8 @@
 package com;
 public class Link<E> {
     //Fields:
-    private E data;
-    private Link<E> next;
+    protected E data;
+    protected Link<E> next;
 
 
 
@@ -33,9 +33,6 @@ public class Link<E> {
         return next;
     }
     public void setNext(Link<E> element){
-        if (element == null){
-            throw new IllegalArgumentException("element can't be null");
-        }
         next = element;
     }
 }

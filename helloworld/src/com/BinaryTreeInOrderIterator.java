@@ -27,7 +27,7 @@ public class BinaryTreeInOrderIterator<T> implements Iterator<T> {
         if(!hasNext()){
             throw new NoSuchElementException();
         }
-        BinaryNode node = stack.pop();
+        BinaryNode<T> node = stack.pop();
         prepareNext(node.getRight());
         return (T)node.getData();
     }

@@ -5,7 +5,7 @@ import Interfaces.*;
 public class LinkedList<T> implements List<T> {
 
     //Fields:
-    private Link<T> first;
+    protected Link<T> first;
     private int size = 0;
 
 
@@ -131,7 +131,7 @@ public class LinkedList<T> implements List<T> {
     }
 
     @Override
-    public boolean remove(Object toRemove) {
+    public boolean remove(T toRemove) {
         Link<T> current = first;
         Link<T> prev = current;
         boolean removed = false;
@@ -173,17 +173,20 @@ public class LinkedList<T> implements List<T> {
     }
 
     public String toString() {
+        if (first==null){
+            return "[]";
+        }
         String s = "[";
         for (Link<T> current = first; current != null; current = current.getNext()) {
             s = s + current.getData() + ", ";
         }
-        s = s + "]";
+        s = s.substring(0,s.length()-2) + "]";
         return s;
     }
 
 
     private boolean rangeCheck(int index) {
-        return (index >= 0 && index < size);
+        return (index >= 0 && index <= size);
     }
 
     @Override
